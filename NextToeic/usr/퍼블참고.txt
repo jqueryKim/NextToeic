@@ -1,0 +1,25 @@
+
+
+퍼블 주소
+http://192.168.11.249:8099/asset/skin/NT/html/sample.html
+
+
+펍주소(다른 분들께 전달드려야되는 주소입니다)
+http://pub.pagodastar.com/asset/skin/NT/html/sample.html
+http://pub.pagodastar.com/asset/skin/NT/html/mobile/sample.html
+
+
+추후 모바일작업시 화면 확인용 주소(WEB 서버에 같은 위치에 파일 넣어주시면됩니다.)
+http://designpub.pagoda21.com/asset/skin/NT/html/mobile/sample.html
+
+
+
+* 해당 푸터 스타일때문에 스타일관련한 CSS 넣어두었습니다.
+추후에 제가 넣어드린 스타일 CSS를 제거해도 화면이 실행되도록 세팅부탁드립니다.
+
+
+
+
+
+
+

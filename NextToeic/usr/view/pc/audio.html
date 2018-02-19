@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>파고다스타 - 최신인강 압도적 1위</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Language" content="English">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="naver-site-verification" content="44fa86ea3842f66f8fb901f9dd7d9d24bcb1256f"/>
+	<meta name="description" content="파고다 1위 스타강사의 토익, 토플, 중국어, HSK, 일본어, JLPT, 아이엘츠, 오픽, 토익스피킹, 기초영어, 취업관련 인터넷강의 서비스">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css"/>
+	<link rel="stylesheet" type="text/css" href="../../common/pc/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../../common/pc/css/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="../../common/pc/css/contents.css"/>
+	<link rel="stylesheet" type="text/css" href="../../common/pc/css/jquery.mCustomScrollbar.css" />
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="../../common/pc/css/ie8.css"/>
+	<script src="../../common/pc/js/respond.min.js"></script>
+	<![endif]-->
+	<!--[if !IE]><link rel="stylesheet" type="text/css" href="../../common/pc/css/non-ie.css" /> <![endif]-->
+
+	<!-- jquery ui theme -->
+	<link rel="stylesheet" type="text/css" href="../../common/pc/css/jquery-ui.min.css"/>
+	<script type="text/javascript" src="../../common/pc/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../../common/pc/js/jquery-migrate-3.0.0.min.js"></script>
+	<script type="text/javascript" src="../../common/pc/js/jquery-ui.min.js"></script>
+	<!-- //jquery ui theme -->
+
+	<script type="text/javascript" src="../../common/pc/js/nt.base.js"></script>
+	<script type="text/javascript" src="../../common/pc/js/jquery.mCustomScrollbar.js"></script>
+	<script type="text/javascript" src="../../common/pc/js/jquery.mousewheel.js"></script>
+</head>
+<body>
+<!-- skipNav -->
+<div id="skipNav">
+	<a href="#contents">본문 바로가기</a>
+</div>
+<!-- //skipNav -->
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- wrapper -->
+		<div class="wrapper">
+			<!-- info -->
+			<div class="info clear">
+				<h1 class="title"><img src="../../common/pc/images/ttl/ttl_constant.png" alt="오답"></h1>
+				<!-- paging -->
+				<div class="paging">
+					<em>150~153</em>
+					<span>/ 200</span>
+				</div>
+				<!-- //paging -->
+			</div>
+			<!-- //info -->
+
+			<!-- cont -->
+			<div class="cont">
+				<div class="btn">
+					<button type="button" class="btn-type01 ver-all"><span>전체문항</span></button>
+				</div>
+			</div>
+			<!-- //cont -->
+
+			<!-- page-btn -->
+			<div class="page-btn">
+				<button type="button" class="type-exit">
+					<span>나가기</span>
+				</button>
+			</div>
+			<!-- //page-btn -->
+		</div>
+		<!-- //wrapper -->
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<div id="contents">
+			<!-- ca-container -->
+			<div class="ca-container">
+				<!-- ca-contents -->
+				<div class="ca-contents">
+					<!-- questions-wrap -->
+					<div class="questions-wrap">
+						<!-- nt-audio -->
+						<div class="nt-audio">
+							<!-- controll-box -->
+							<div class="controll-box">
+								<!-- play-box -->
+								<div class="play-box">
+									<button type="button" class="btn-prev">이전</button>
+									<button type="button" class="btn-play"></button>
+									<button type="button" class="btn-next">다음</button>
+								</div>
+								<!-- //play-box -->
+
+								<!-- progress-box -->
+								<div class="progress-box">
+									<div class="play-time">
+										<span class="this-time">00:00</span>
+										<span class="remaining-time">-00:00</span>
+									</div>
+
+									<div class="progress-bar">
+										<div class="track">
+											<div class="bar"></div>
+										</div>
+									</div>
+								</div>
+								<!-- //progress-box -->
+
+								<!-- volume-box -->
+								<div class="volume-box">
+									<div class="volume-bar">
+										<em></em>
+										<div class="track">
+											<div class="bar"></div>
+										</div>
+									</div>
+								</div>
+								<!-- //volume-box -->
+							</div>
+							<!-- //controll-box -->
+						</div>
+						<!-- //nt-audio -->
+
+						<script>
+							$(document).ready(function(){
+								var ntAudio,
+									myPlayer,
+									timeInterval;
+
+								ntAudio = {
+									controll_group : $('.controll-box'),
+									controll_btn : $('.controll-box .play-box button'),
+									this_time : $('.this-time'),
+									remaining_time : $('.remaining-time'),
+									bar : $('.progress-bar .track .bar'),
+									vbox : $('.volume-bar'),
+									vbar : $('.volume-bar .track .bar'),
+									jump_sec : 10,
+									set : function(url){
+										myPlayer = new Audio();
+										myPlayer.src = url;
+
+										myPlayer.onloadeddata = function(){
+											ntAudio.time_call();
+
+											// volume default
+											myPlayer.volume = 0.3;
+											$( ".volume-bar" ).slider('value',30);
+											ntAudio.seek_move(30, 'volume');
+										}
+									},
+									ui_evt : function(type, state){
+										switch(type){
+											case 'play' :
+												var current;
+
+												clearInterval(timeInterval);
+												current = ntAudio.controll_group.find('.btn-play');
+												if(state){
+													current.addClass('pause');
+													ntAudio.auto_play();
+												}else{
+													current.removeClass('pause');
+												}
+												break;
+											default :
+												break;
+										}
+									},
+									play : function(state){
+										(state) ? myPlayer.play() : myPlayer.pause();
+										ntAudio.ui_evt('play' ,state);
+									},
+									seek_move : function(percent, type){
+										var this_bar,
+											timeto;
+
+										switch(type){
+											case 'volume' :
+												this_bar = ntAudio.vbar;
+												myPlayer.volume = percent/100;
+												(percent == 0) ? ntAudio.vbox.addClass('mute') : ntAudio.vbox.removeClass('mute');
+												break;
+											case 'progress' :
+												console.log(percent);
+												this_bar = ntAudio.bar;
+												timeto = Math.round(myPlayer.duration * (percent/100));
+												myPlayer.currentTime = timeto;
+												break;
+											default :
+												break;
+										}
+
+										this_bar.css('width', percent+'%');
+									},
+									seek : function(percent){
+										var handle;
+
+										handle = ntAudio.bar.closest('.progress-bar').find('.ui-slider-handle');
+										ntAudio.bar.css('width', percent+'%');
+										handle.css('left', percent+'%');
+									},
+									seek_jump : function(type){
+										var this_time,
+											total_time,
+											percent;
+
+										total_time = myPlayer.duration;
+										switch(type){
+											case 'btn-prev' :
+												this_time = myPlayer.currentTime - ntAudio.jump_sec;
+												if(this_time < 0){
+													this_time = 0;
+												}
+												break;
+											case 'btn-next' :
+												this_time = myPlayer.currentTime + ntAudio.jump_sec;
+												if(this_time >= total_time){
+													this_time = total_time;
+												}
+												break;
+										}
+
+										percent = Math.round((this_time / total_time) * 100);
+										ntAudio.seek_move(percent, 'progress');
+									},
+									controll_filter : function(obj){
+										var type;
+
+										type = obj.attr('class');
+
+										switch(type){
+											case 'btn-prev' :
+											case 'btn-next' :
+												ntAudio.seek_jump(type);
+												break;
+											default :
+												var state;
+
+												(type.indexOf('pause') == -1) ? state = true : state = false;
+												ntAudio.play(state);
+												break;
+										}
+									},
+									change_time_type : function(time_seccond){
+										var minutes,
+											seccond,
+											string_min,
+											string_sec;
+
+										minutes = Math.floor(time_seccond / 60);
+										seccond = time_seccond - (minutes * 60);
+
+										(minutes < 10) ? string_min = '0'+minutes+':' : string_min = minutes+':';
+										(seccond < 10) ? string_sec = '0'+seccond : string_sec = seccond.toString();
+
+										return string_min+string_sec;
+									},
+									time_set : function(this_t, remaining_t){
+										var ttime,
+											rtime,
+											string_ttime,
+											string_rtime;
+
+										ttime = Math.round(Number(this_t));
+										rtime = Math.round(Number(remaining_t));
+
+										string_ttime = ntAudio.change_time_type(ttime);
+										string_rtime = ntAudio.change_time_type(rtime);
+
+										ntAudio.this_time.text(string_ttime);
+										ntAudio.remaining_time.text('-'+string_rtime);
+									},
+									time_call : function(){
+										var this_time,
+											r_time,
+											this_percent;
+
+										this_time = myPlayer.currentTime;
+										r_time = myPlayer.duration - this_time;
+										this_percent = (Math.round((this_time/myPlayer.duration) * 1000)) / 10;
+										ntAudio.time_set(this_time, r_time);
+										ntAudio.seek(this_percent);
+									},
+									auto_play : function(){
+										timeInterval = setInterval(function(){
+											ntAudio.time_call();
+										},500);
+									}
+								}
+								ntAudio.controll_btn.on('click', function(){
+									ntAudio.controll_filter($(this));
+									return false;
+								});
+
+								ntAudio.set('http://file.pagodastar.com//A1801/A1801P1@00001/s1.mp3');
+
+
+								progress_bar = $('.progress-bar .track .bar');
+								$( ".progress-bar" ).slider({
+									creat : function(){
+										ntAudio.seek_move($(this).slider( "value" ), 'progress');
+									},
+									slide : function(event,ui){
+										ntAudio.seek_move(ui.value, 'progress');
+									}
+								});
+
+								$( ".volume-bar" ).slider({
+									creat : function(){
+										ntAudio.seek_move($(this).slider( "value" ), 'volume');
+									},
+									slide : function(event,ui){
+										ntAudio.seek_move(ui.value, 'volume');
+									}
+								});
+							});
+						</script>
+					</div>
+					<!-- //questions-wrap -->
+				</div>
+				<!-- //ca-contents -->
+
+				<!-- ca-exams -->
+				<div class="ca-exams">
+					<!-- ca-exams-container -->
+					<div class="ca-exams-container" data-theme-index="4">
+						<!--
+							오답일 경우
+							class="exam-items" 엘리먼트에 ver-incorrect class 추가
+						-->
+						<!-- exam-items -->
+						<div class="exam-items ver-incorrect">
+							<!-- exam-questions -->
+							<div class="exam-questions">
+								<div class="guide-constant-answer">
+									<span class="number"><span>150</span></span>
+									<em>오답</em>입니다.
+								</div>
+
+								<p>In the first e-mail, the underlined, bold word “left” in paragraph 1, is closest in meaning to</p>
+								<p class="guide_kr">
+									남자가 원하는것은?
+								</p>
+							</div>
+							<!-- //exam-questions -->
+
+							<!-- exam-answer -->
+							<div class="exam-answer">
+								<!--
+									1. 내가 선택했던 답
+									class="answer-items" 엘리먼트에 my-incorrect 추가
+									2. 정답
+									class="answer-items" 엘리먼트에 right-answer 추가
+								-->
+								<div class="answer-items my-incorrect">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(A)</em>
+											<div>
+												departed
+												<p class="guide_kr">
+													세상을 떠난
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+
+								<div class="answer-items right-answer">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(B)</em>
+											<div>
+												submitted
+												<p class="guide_kr">
+													제출하다.
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+
+								<div class="answer-items">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(C)</em>
+											<div>
+												staying
+												<p class="guide_kr">
+													계속 있다.
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+
+								<div class="answer-items">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(D)</em>
+											<div>
+												remaining
+												<p class="guide_kr">
+													남아 있는, 남은
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- //exam-answer -->
+
+							<!-- exam-others -->
+							<div class="exam-others">
+								<!-- section -->
+								<div class="section">
+									<div class="ttl-box"><img src="../../common/pc/images/ttl/ttl_exposition.png" alt="해설"></div>
+									<div class="cont">
+										해당 문장에서 left는 바로 앞에 위치한 no rooms를 수식하는 과거분사로 쓰였다. 바로 뒤에 ‘문제가 되지 않기를 바란다’는 말이 있는 것으로 보아 예약 가능한 특정 객실이 남아 있지 않았음을 의미한다는 것을 알 수 있다. 따라서 ‘남아 있는, 남은’을 뜻하는 (D)가 정답이다.
+									</div>
+								</div>
+								<!-- //section -->
+							</div>
+							<!-- //exam-others -->
+						</div>
+						<!-- //exam-items -->
+
+						<!-- exam-items -->
+						<div class="exam-items">
+							<!-- exam-questions -->
+							<div class="exam-questions">
+								<div class="guide-constant-answer">
+									<span class="number"><span>151</span></span>
+									<em>정답</em>입니다.
+								</div>
+
+								<p>In the first e-mail, the underlined, bold word “left” in paragraph 1, is closest in meaning to</p>
+								<p class="guide_kr">
+									남자가 원하는것은?
+								</p>
+							</div>
+							<!-- //exam-questions -->
+
+							<!-- exam-answer -->
+							<div class="exam-answer">
+								<div class="answer-items">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(A)</em>
+											<div>
+												departed
+												<p class="guide_kr">
+													세상을 떠난
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+
+								<div class="answer-items right-answer">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(B)</em>
+											<div>
+												submitted
+												<p class="guide_kr">
+													제출하다.
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+
+								<div class="answer-items">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(C)</em>
+											<div>
+												staying
+												<p class="guide_kr">
+													계속 있다.
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+
+								<div class="answer-items">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(D)</em>
+											<div>
+												remaining
+												<p class="guide_kr">
+													남아 있는, 남은
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- //exam-answer -->
+
+							<!-- exam-others -->
+							<div class="exam-others">
+								<!-- section -->
+								<div class="section">
+									<div class="ttl-box"><img src="../../common/pc/images/ttl/ttl_exposition.png" alt="해설"></div>
+									<div class="cont">
+										해당 문장에서 left는 바로 앞에 위치한 no rooms를 수식하는 과거분사로 쓰였다. 바로 뒤에 ‘문제가 되지 않기를 바란다’는 말이 있는 것으로 보아 예약 가능한 특정 객실이 남아 있지 않았음을 의미한다는 것을 알 수 있다. 따라서 ‘남아 있는, 남은’을 뜻하는 (D)가 정답이다.
+									</div>
+								</div>
+								<!-- //section -->
+							</div>
+							<!-- //exam-others -->
+						</div>
+						<!-- //exam-items -->
+
+						<!-- exam-items -->
+						<div class="exam-items">
+							<!-- exam-questions -->
+							<div class="exam-questions">
+								<div class="guide-constant-answer">
+									<span class="number"><span>152</span></span>
+									<em>정답</em>입니다.
+								</div>
+
+								<p>In the first e-mail, the underlined, bold word “left” in paragraph 1, is closest in meaning to</p>
+								<p class="guide_kr">
+									남자가 원하는것은?
+								</p>
+							</div>
+							<!-- //exam-questions -->
+
+							<!-- exam-answer -->
+							<div class="exam-answer">
+								<div class="answer-items">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(A)</em>
+											<div>
+												departed
+												<p class="guide_kr">
+													세상을 떠난
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+
+								<div class="answer-items right-answer">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(B)</em>
+											<div>
+												submitted
+												<p class="guide_kr">
+													제출하다.
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+
+								<div class="answer-items">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(C)</em>
+											<div>
+												staying
+												<p class="guide_kr">
+													계속 있다.
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+
+								<div class="answer-items">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(D)</em>
+											<div>
+												remaining
+												<p class="guide_kr">
+													남아 있는, 남은
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- //exam-answer -->
+
+							<!-- exam-others -->
+							<div class="exam-others">
+								<!-- section -->
+								<div class="section">
+									<div class="ttl-box"><img src="../../common/pc/images/ttl/ttl_exposition.png" alt="해설"></div>
+									<div class="cont">
+										해당 문장에서 left는 바로 앞에 위치한 no rooms를 수식하는 과거분사로 쓰였다. 바로 뒤에 ‘문제가 되지 않기를 바란다’는 말이 있는 것으로 보아 예약 가능한 특정 객실이 남아 있지 않았음을 의미한다는 것을 알 수 있다. 따라서 ‘남아 있는, 남은’을 뜻하는 (D)가 정답이다.
+									</div>
+								</div>
+								<!-- //section -->
+							</div>
+							<!-- //exam-others -->
+						</div>
+						<!-- //exam-items -->
+
+						<!-- exam-items -->
+						<div class="exam-items">
+							<!-- exam-questions -->
+							<div class="exam-questions">
+								<div class="guide-constant-answer">
+									<span class="number"><span>153</span></span>
+									<em>정답</em>입니다.
+								</div>
+
+								<p>In the first e-mail, the underlined, bold word “left” in paragraph 1, is closest in meaning to</p>
+								<p class="guide_kr">
+									남자가 원하는것은?
+								</p>
+							</div>
+							<!-- //exam-questions -->
+
+							<!-- exam-answer -->
+							<div class="exam-answer">
+								<div class="answer-items">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(A)</em>
+											<div>
+												departed
+												<p class="guide_kr">
+													세상을 떠난
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+
+								<div class="answer-items right-answer">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(B)</em>
+											<div>
+												submitted
+												<p class="guide_kr">
+													제출하다.
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+
+								<div class="answer-items">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(C)</em>
+											<div>
+												staying
+												<p class="guide_kr">
+													계속 있다.
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+
+								<div class="answer-items">
+									<div class="items-cont">
+										<span class="item-txt">
+											<em>(D)</em>
+											<div>
+												remaining
+												<p class="guide_kr">
+													남아 있는, 남은
+												</p>
+											</div>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- //exam-answer -->
+
+							<!-- exam-others -->
+							<div class="exam-others">
+								<!-- section -->
+								<div class="section">
+									<div class="ttl-box"><img src="../../common/pc/images/ttl/ttl_exposition.png" alt="해설"></div>
+									<div class="cont">
+										해당 문장에서 left는 바로 앞에 위치한 no rooms를 수식하는 과거분사로 쓰였다. 바로 뒤에 ‘문제가 되지 않기를 바란다’는 말이 있는 것으로 보아 예약 가능한 특정 객실이 남아 있지 않았음을 의미한다는 것을 알 수 있다. 따라서 ‘남아 있는, 남은’을 뜻하는 (D)가 정답이다.
+									</div>
+								</div>
+								<!-- //section -->
+							</div>
+							<!-- //exam-others -->
+						</div>
+						<!-- //exam-items -->
+					</div>
+					<!-- //ca-exams-container -->
+				</div>
+				<!-- //ca-exams -->
+			</div>
+			<!-- //ca-container -->
+		</div>
+		<!-- //contents -->
+	</div>
+	<!-- //container -->
+
+	<!-- memo -->
+	<div id="memo">
+		<strong>메모</strong>
+		<div class="btn-box">
+			<button type="button"><span><img src="../../common/pc/images/icon/icon_add.png" alt="추가하기"></span></button>
+			<button type="button"><span><img src="../../common/pc/images/icon/icon_list.png" alt="목록보기"></span></button>
+		</div>
+	</div>
+	<!-- //memo -->
+
+	<!-- foot-nav -->
+	<div id="foot-nav">
+		<div class="btn-wrap">
+			<a href="#" class="prev">이전</a>
+			<a href="#" class="next">다음</a>
+		</div>
+	</div>
+	<!-- //foot-nav -->
+</div>
+<!-- //wrap -->
+
+<script language="javascript" type="text/javascript" src="../../common/pc/js/nt.js"></script>
+</body>
+</html>

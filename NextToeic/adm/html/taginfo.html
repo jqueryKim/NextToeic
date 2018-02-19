@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title> Next Toeic </title>
+	<link rel="stylesheet" type="text/css" href="../common/css/admin.css" />
+	<link rel="stylesheet" type="text/css" href="../common/css/jquery-ui.css" />
+	<script type="text/javascript" src="../common/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery-migrate-3.0.0.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery-ui.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- header_container -->
+		<div class="header_container">
+			<!-- head -->
+			<div class="head">
+				<div class="wrapper">
+					<h1>
+						<a href="#">
+							<img src="../common/images/logo.png" alt="넥스트 토익" />
+							<span>CMS/LMS</span>
+						</a>
+					</h1>
+					<ul class="lnb">
+						<li>
+							<a href="#">문제등록<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">Part별 문제 등록</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">시험 등록<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">시험 등록</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">문제 검색<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">출처</a></li>
+									<li><a href="#">입력 시점</a></li>
+									<li><a href="#">입력/수정자</a></li>
+									<li><a href="#">파트</a></li>
+									<li><a href="#">태그</a></li>
+									<li><a href="#">제목</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="active">
+							<a href="#">결과 리포트<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">태그별 정보</a></li>
+									<li><a href="#">환산 정보</a></li>
+									<li><a href="#">등급별 정보</a></li>
+									<li><a href="#">학업 성취 정보(예정)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">단어 관리<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">단어 등록/수정</a></li>
+									<li><a href="#">단어 TEST</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">OMR<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">데이터 모음(예정)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">이용 현황<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">문제별 - 사용(유무) 현황</a></li>
+									<li><a href="#">문제별 - 사용(시험등록) 현황</a></li>
+									<li><a href="#">문제별 - 오답 현황</a></li>
+									<li><a href="#">문제별 - 평균 풀이 시간</a></li>
+									<li><a href="#">시험별 - 응시 현황</a></li>
+									<li><a href="#">시험별 - 풀이 시간</a></li>
+									<li><a href="#">이용자별</a></li>
+									<li><a href="#">태그별</a></li>
+									<li><a href="#">그레이드별</a></li>
+									<li><a href="#">OMR (예정)</a></li>
+									<li><a href="#">로그 기록(예정)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">태그 관리<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">태그 등록/수정</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">권한 관리<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">관리자 등록(예정)</a></li>
+									<li><a href="#">전체 권한 메뉴(예정)</a></li>
+									<li><a href="#">내정보수정</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //head -->
+
+			<!-- headerInfo -->
+			<div class="headerInfo">
+				<div class="wrapper">
+					<div class="location">
+						<span>결과 리포트</span>
+						<span class="current">태그별 정보</span>
+					</div>
+					<ul class="info">
+						<li><em><a href="#">관리자님</a></em> 안녕하세요.</li>
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">홈으로 바로가기</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //headerInfo -->
+		</div>
+		<!-- //header_container -->
+
+		<span class="menu_logo">
+			<a href="#">
+				<img src="../common/images/logo.png" alt="넥스트 토익" /><br>
+				<span>CMS/LMS</span>
+			</a>
+		</span>
+		<button type="button" class="btn_menu">
+			<span>메뉴보기</span>
+			<div class="bar top"></div>
+			<div class="bar middle"></div>
+			<div class="bar bottom"></div>
+		</button>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- container body -->
+		<div id="contents">
+			<!-- contents -->
+			<div class="contents">
+				<!-- title -->
+				<h3 class="titleA">태그별 정보</h3>
+				<!-- //title -->
+
+				<!-- searchBox -->
+				<div class="searchBox">
+					<!-- searchDep -->
+					<div class="searchDep">
+						<table summary="검색" class="sheetSearch">
+							<caption>검색 테이블</caption>
+								<tbody>
+									<tr>
+									<td>
+										<div class="col_align_box">
+											<span class="left date_search search_items" data-type="date" data-name="기간">
+												<input type="text" name="stsp_sdate" title="검색기간" id="from" class="datepicker" placeholder="시작일">
+												<span class="dash">-</span>
+												<input type="text" name="stsp_edate" title="검색기간" id="to" class="datepicker" placeholder="종료일">
+											</span>
+
+											<span class="right multi_select_input search_items" data-type="multi_select_input" data-name="검색어">
+												<select name="s_mode" id="" style="width:150px;">
+													<option value="tg_title" data-name="제목">제목 검색</option>
+													<option value="tg_code" data-name="코드">코드 검색</option>
+												</select>
+
+												<input type="text" name="" title="" placeholder="태그 코드 제목을 입력해주세요." style="width:350px;" />
+											</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<!-- search_criteria -->
+						<div class="search_criteria">
+							<!-- criteria_box -->
+							<div class="criteria_box" style="display:none">
+								<div class="sectionTitleA">그룹 선택</div>
+								<table summary="검색" class="sheetSearch">
+									<caption>검색 테이블</caption>
+									<tbody>
+										<tr>
+											<td>
+												<div class="check_itemsWrap search_items" data-type="multi_checkbox" data-name="그룹">
+													<label><input type="checkbox" name="tg_gps" value="BC">BC</label>
+													<label><input type="checkbox" name="tg_gps" value="BP">BP</label>
+													<label><input type="checkbox" name="tg_gps" value="BS">BS</label>
+													<label><input type="checkbox" name="tg_gps" value="CA">CA</label>
+													<label><input type="checkbox" name="tg_gps" value="CG">CG</label>
+													<label><input type="checkbox" name="tg_gps" value="CP">CP</label>
+													<label><input type="checkbox" name="tg_gps" value="CQ">CQ</label>
+													<label><input type="checkbox" name="tg_gps" value="CR">CR</label>
+													<label><input type="checkbox" name="tg_gps" value="CT">CT</label>
+													<label><input type="checkbox" name="tg_gps" value="PR">PR</label>
+													<label><input type="checkbox" name="tg_gps" value="QA">QA</label>
+													<label><input type="checkbox" name="tg_gps" value="QL">QL</label>
+													<label><input type="checkbox" name="tg_gps" value="QN">QN</label>
+													<label><input type="checkbox" name="tg_gps" value="QT">QT</label>
+													<label><input type="checkbox" name="tg_gps" value="TR">TR</label>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //criteria_box -->
+						</div>
+						<!-- //search_criteria -->
+					</div>
+					<!-- //searchDep -->
+
+					<!-- criteria_result -->
+					<div class="criteria_result">
+						<table summary="검색" class="sheetSearch">
+							<caption>검색 테이블</caption>
+							<colgroup>
+								<col style="width:70%">
+								<col>
+							</colgroup>
+							<tbody><tr>
+								<td>
+									<div class="criteria_result_box" id="search_result_target01">
+										<em class="sbj">검색 조건</em>
+										<div class="cont"></div>
+									</div>
+
+									<div class="criteria_result_box" id="search_result_target02">
+										<em class="sbj">상세 검색</em>
+										<div class="cont"></div>
+									</div>
+								</td>
+								<td>
+									<select name="pageTerm" title="" style="width:100%">
+										<option value="20" selected="">20 페이지</option>
+										<option value="30">30 페이지</option>
+										<option value="40">40 페이지</option>
+										<option value="50">50 페이지</option>
+										<option value="60">60 페이지</option>
+										<option value="70">70 페이지</option>
+										<option value="80">80 페이지</option>
+										<option value="90">90 페이지</option>
+										<option value="100">100 페이지</option>
+										<option value="110">110 페이지</option>
+										<option value="120">120 페이지</option>
+										<option value="130">130 페이지</option>
+										<option value="140">140 페이지</option>
+										<option value="150">150 페이지</option>
+										<option value="160">160 페이지</option>
+										<option value="170">170 페이지</option>
+										<option value="180">180 페이지</option>
+										<option value="190">190 페이지</option>
+										<option value="200">200 페이지</option>
+									</select>
+
+									<div class="btns">
+										<button type="submit" class="btnF"><span>검색</span></button>
+										<button type="button" class="btnF ver6"><span>엑셀</span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+					<button type="button" class="trigger" data-target="criteria_box"><span>검색 조건 더 보기</span></button>
+					<!-- //criteria_result -->
+				</div>
+				<!-- //searchBox -->
+
+				<div class="tabA">
+					<ul>
+						<li class="active"><a href="#">BC</a></li>
+						<li><a href="#">BP</a></li>
+						<li><a href="#">BS</a></li>
+						<li><a href="#">CA</a></li>
+						<li><a href="#">CG</a></li>
+						<li><a href="#">CP</a></li>
+						<li><a href="#">CQ</a></li>
+						<li><a href="#">CR</a></li>
+						<li><a href="#">CT</a></li>
+						<li><a href="#">PR</a></li>
+						<li><a href="#">QA</a></li>
+						<li><a href="#">QL</a></li>
+						<li><a href="#">QN</a></li>
+						<li><a href="#">QT</a></li>
+						<li><a href="#">TR</a></li>
+					</ul>
+				</div>
+				<!-- list Form -->
+				<div id="listForm">
+
+					<!-- sheetInfo -->
+					<div class="sheetInfo">
+						<div class="tool">
+							<button type="button" class="btnF ver6"><span>CSV업로드</span></button>
+							<a href="pop.html" class="btnF ver6" onclick="window.open(this.href,'','width=400,height=300,scrollbars=yes');return false;""><span>CSV양식다운로드</span></a>
+							<button type="button" class="btnF"><span>TAG등록</span></button>
+						</div>
+					</div>
+					<!-- //sheetInfo -->
+
+					<!-- list -->
+					<table summary="태그별 정보" class="sheetListB">
+						<caption>태그별 정보 목록</caption>
+						<colgroup>
+							<col style="width:7%">
+							<col style="width:8%">
+							<col style="width:12%">
+							<col style="width:8%">
+							<col style="width:10%">
+							<col style="width:14%">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">No</th>
+								<th scope="col"><a href="#" class="sort">코드</a></th>
+								<th scope="col"><a href="#" class="sort desc">태그명</a></th>
+								<th scope="col">수정</th>
+								<th scope="col"><a href="#" class="sort">타이틀</a></th>
+								<th scope="col"><a href="#" class="sort">학습진단</a></th>
+								<th scope="col"><a href="#" class="sort">학습제안</a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>BC001</td>
+								<td class="subject"><a href="#">문장 성분_가목적어</a></td>
+								<td>
+									<a href="#" class="btnA ver5"><span>수정</span></a>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>BC002</td>
+								<td class="subject"><a href="#">문장 성분_가주어</a></td>
+								<td>
+									<a href="#" class="btnA ver5"><span>수정</span></a>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>BC003</td>
+								<td class="subject"><a href="#">문장 성분_목적보어</a></td>
+								<td>
+									<a href="#" class="btnA ver5"><span>수정</span></a>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- //list -->
+				</div>
+		 		<!-- //list Form -->
+
+			</div>
+			<!-- //contents -->
+		</div>
+		<!-- //container body -->
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<em class="copyright">
+			Copyright© PAGODA SCS Inc. All rights reserved.
+		</em>
+	</div>
+	<!-- //footer -->
+</div>
+
+<script src="../common/js/admin.js" type="text/javascript"></script>
+</body>
+</html>

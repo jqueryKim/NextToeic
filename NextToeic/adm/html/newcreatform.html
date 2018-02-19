@@ -1,0 +1,822 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title> Next Toeic </title>
+	<link rel="stylesheet" type="text/css" href="../common/css/admin.css" />
+	<link rel="stylesheet" type="text/css" href="../common/css/jquery-ui.css" />
+	<script type="text/javascript" src="../common/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery-ui.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- header_container -->
+		<div class="header_container">
+			<!-- head -->
+			<div class="head">
+				<div class="wrapper">
+					<h1>
+						<a href="#">
+							<img src="../common/images/logo.png" alt="넥스트 토익" />
+							<span>CMS/LMS</span>
+						</a>
+					</h1>
+					<ul class="lnb">
+						<li>
+							<a href="#">문제등록<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">Part별 문제 등록</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">시험 등록<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">시험 등록</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">문제 검색<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">출처</a></li>
+									<li><a href="#">입력 시점</a></li>
+									<li><a href="#">입력/수정자</a></li>
+									<li><a href="#">파트</a></li>
+									<li><a href="#">태그</a></li>
+									<li><a href="#">제목</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">결과 리포트<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">태그별 정보</a></li>
+									<li><a href="#">환산 정보</a></li>
+									<li><a href="#">등급별 정보</a></li>
+									<li><a href="#">학업 성취 정보(예정)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">단어 관리<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">단어 등록/수정</a></li>
+									<li><a href="#">단어 TEST</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">OMR<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">데이터 모음(예정)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">이용 현황<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">문제별 - 사용(유무) 현황</a></li>
+									<li><a href="#">문제별 - 사용(시험등록) 현황</a></li>
+									<li><a href="#">문제별 - 오답 현황</a></li>
+									<li><a href="#">문제별 - 평균 풀이 시간</a></li>
+									<li><a href="#">시험별 - 응시 현황</a></li>
+									<li><a href="#">시험별 - 풀이 시간</a></li>
+									<li><a href="#">이용자별</a></li>
+									<li><a href="#">태그별</a></li>
+									<li><a href="#">그레이드별</a></li>
+									<li><a href="#">OMR (예정)</a></li>
+									<li><a href="#">로그 기록(예정)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">태그 관리<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">태그 등록/수정</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">권한 관리<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">관리자 등록(예정)</a></li>
+									<li><a href="#">전체 권한 메뉴(예정)</a></li>
+									<li><a href="#">내정보수정</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //head -->
+
+			<!-- headerInfo -->
+			<div class="headerInfo">
+				<div class="wrapper">
+					<div class="location">
+						<span>시험 등록</span>
+						<span class="current">시험 등록</span>
+					</div>
+					<ul class="info">
+						<li><em><a href="#">관리자님</a></em> 안녕하세요.</li>
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">홈으로 바로가기</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //headerInfo -->
+		</div>
+		<!-- //header_container -->
+
+		<span class="menu_logo">
+			<a href="#">
+				<img src="../common/images/logo.png" alt="넥스트 토익" /><br>
+				<span>CMS/LMS</span>
+			</a>
+		</span>
+		<button type="button" class="btn_menu">
+			<span>메뉴보기</span>
+			<div class="bar top"></div>
+			<div class="bar middle"></div>
+			<div class="bar bottom"></div>
+		</button>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- container body -->
+		<div id="contents">
+			<!-- contents -->
+			<div class="contents">
+				<!-- title -->
+				<h3 class="titleA">시험 등록</h3>
+				<!-- //title -->
+
+				<!-- tabC -->
+				<div class="tabE">
+					<ul>
+						<li class="active"><a href="#">시험 등록</a></li>
+						<li><a href="#">학업성취도 태그</a></li>
+						<li><a href="#">추천/연결</a></li>
+						<li><a href="#">상품관리이용 현황</a></li>
+					</ul>
+				</div>
+				<!-- //tabC -->
+
+				<!-- list Form -->
+				<div id="listForm">
+					<!-- section -->
+					<div class="section">
+						<table summary="" class="sheetWriteA">
+							<caption></caption>
+							<colgroup>
+								<col style="width:13%">
+								<col style="width:20%">
+								<col style="width:13%">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">등록자</th>
+									<td>유진선</td>
+									<th scope="row">ID</th>
+									<td>900목표반 1802#001</td>
+								</tr>
+								<tr>
+									<th scope="row">시험 유형</th>
+									<td>Test F</td>
+									<td rowspan="2" colspan="2">
+										<!-- list -->
+										<table summary="" class="sheetListA">
+											<caption>일반회원 목록</caption>
+											<colgroup>
+												<col style="width:16%">
+												<col style="width:21%">
+												<col style="width:21%">
+												<col>
+												<col style="width:21%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">상태</th>
+													<th scope="col">시작일</th>
+													<th scope="col">종료일</th>
+													<th scope="col" class="last_child" colspan="2">문제 갯수</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>대기</td>
+													<td>20180201</td>
+													<td>20180228</td>
+													<td>LC 100</td>
+													<td>RC 100</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="guideSheet">
+							(주의) 기간 관련 : TEST A~C만 해당 기간에 대한 관리를 합니다.
+						</div>
+					</div>
+					<!-- //section -->
+
+					<!-- section -->
+					<div class="section">
+						<h4 class="sectionTitleA">시험 조건 확인</h4>
+						<table summary="" class="sheetWriteA">
+							<caption></caption>
+							<colgroup>
+								<col style="width:16%">
+								<col style="width:13%">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">Intro</th>
+									<td colspan="2">
+										<div class="radioWrap">
+											<label>
+												<input type="radio" name="" title="" checked />
+												LC test 자가 진단
+											</label>
+											<label>
+												<input type="radio" name="" title="" />
+												LC test 자가 진단 필요 없음
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" rowspan="3">응시 조건</th>
+									<td>연결 상품 번호</td>
+									<td><input type="text" name="" value="653921" title="" /></td>
+								</tr>
+								<tr>
+									<td>중복 허용</td>
+									<td>
+										<div class="radioWrap">
+											<label>
+												<input type="radio" name="" title="" checked />
+												중복 응시 제한 없음
+											</label>
+											<label>
+												<input type="radio" name="" title="" />
+												월1회 제한
+											</label>
+											<label>
+												<input type="radio" name="" title="" />
+												일3회 제한
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>시간 제한</td>
+									<td>
+										<div class="radioWrap">
+											<label>
+												<input type="radio" name="" title="" checked />
+												시간 제한하지 않음
+											</label>
+											<label>
+												<input type="radio" name="" title="" />
+												시간 제한함
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">추천 상품</th>
+									<td colspan="2">
+										<div class="radioWrap">
+											<label>
+												<input type="radio" name="" title="" checked />
+												해당 없음
+											</label>
+											<label>
+												<input type="radio" name="" title="" />
+												추천 상품 있음
+											</label>
+
+											<input type="text" name="" title="" style="width:300px;" />
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+
+					</div>
+					<!-- //section -->
+
+					<div class="section">
+						<!-- searchBox -->
+						<div class="searchBox">
+							<!-- searchDep -->
+							<div class="searchDep">
+								<table summary="검색" class="sheetSearch">
+									<caption>검색 테이블</caption>
+									<tbody><tr>
+										<td>
+											<select name="stsp_type" title="" class="search_items" style="width:13%" data-type="select" data-name="문제">
+												<option value="">전체</option>
+												<option value="T001LC0">PART1</option>
+												<option value="T002LC0">PART2</option>
+												<option value="T003LC0">PART3</option>
+												<option value="T004LC0">PART4</option>
+												<option value="T005RC0">PART5</option>
+												<option value="T006RC0">PART6</option>
+												<option value="T007RC0">PART7</option>
+											</select>
+
+											<!-- error_rate -->
+											<span class="error_rate search_items" data-type="checkbox" data-name="오답률">
+												<label>
+													<input type="checkbox" name="stsp_result_pers" title="오답률">
+													오답률
+												</label>
+												<input type="text" name="stsp_spoint" title="오답률" value="0" style="width:100px" disabled="">
+												<span class="dash">-</span>
+												<input type="text" name="stsp_epoint" title="오답률" value="100" style="width:100px" disabled="">
+											</span>
+											<!-- //error_rate -->
+
+											<span class="date_search search_items" data-type="date" data-name="기간">
+												<input type="text" name="stsp_sdate" title="검색기간" id="from" class="datepicker" placeholder="시작일">
+												<span class="dash">-</span>
+												<input type="text" name="stsp_edate" title="검색기간" id="to" class="datepicker" placeholder="종료일">
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" name="search" title="검색어" style="width:99%" placeholder="키워드를 입력하세요." class="search_items" data-type="input_text" data-name="키워드">
+										</td>
+									</tr>
+								</tbody></table>
+
+								<!-- search_criteria -->
+								<div class="search_criteria">
+									<!-- criteria_box -->
+									<div class="criteria_box" style="display:none">
+										<table summary="검색" class="sheetSearch">
+											<caption>검색 테이블</caption>
+											<tbody><tr>
+												<td>
+													<input type="text" name="" title="검색어" style="width:900px" placeholder="태그코드를 입력하세요.(,쉼표로 구분합니다.)" class="tag_insert_input search_items" data-type="input_multi_text" data-name="태그">
+													<button type="submit" class="btnA ver4 btn_tag_code_view"><span>태그 코드 / 이름 선택</span></button>
+
+													<!-- tag_codes_box -->
+													<div class="tag_codes_box">
+														<a href="#tag_group_QL" type="button" class="tagA"><span>QL</span></a>
+														<a href="#tag_group_QT" type="button" class="tagA"><span>QT</span></a>
+														<a href="#tag_group_QA" type="button" class="tagA"><span>QA</span></a>
+														<a href="#tag_group_QN" type="button" class="tagA"><span>QN</span></a>
+														<a href="#tag_group_CG" type="button" class="tagA"><span>CG</span></a>
+														<a href="#tag_group_CQ" type="button" class="tagA"><span>CQ</span></a>
+														<a href="#tag_group_CP" type="button" class="tagA"><span>CP</span></a>
+														<a href="#tag_group_CA" type="button" class="tagA"><span>CA</span></a>
+														<a href="#tag_group_CR" type="button" class="tagA"><span>CR</span></a>
+														<a href="#tag_group_CT" type="button" class="tagA"><span>CT</span></a>
+														<a href="#tag_group_PR" type="button" class="tagA"><span>PR</span></a>
+														<a href="#tag_group_BS" type="button" class="tagA"><span>BS</span></a>
+														<a href="#tag_group_BC" type="button" class="tagA"><span>BC</span></a>
+														<a href="#tag_group_BP" type="button" class="tagA"><span>BP</span></a>
+														<a href="#tag_group_TR" type="button" class="tagA"><span>TR</span></a>
+
+														<div id="tag_group_QL" class="tag_codes_items">
+															<a href="#" id="sck_QL001" data-code="QL001" class="tc_item">독해지문길이_100~150단어 미만</a>
+															<a href="#" id="sck_QL002" data-code="QL002" class="tc_item">독해지문길이_100단어 미만</a>
+															<a href="#" id="sck_QL003" data-code="QL003" class="tc_item">독해지문길이_150~200단어 미만</a>
+															<a href="#" id="sck_QL004" data-code="QL004" class="tc_item">독해지문길이_200~300단어 미만</a>
+															<a href="#" id="sck_QL005" data-code="QL005" class="tc_item">독해지문길이_300단어 이상</a>
+															<a href="#" id="sck_QL006" data-code="QL006" class="tc_item">듣기문제길이_6단어 이하</a>
+															<a href="#" id="sck_QL007" data-code="QL007" class="tc_item">듣기문제길이_7~8단어 </a>
+															<a href="#" id="sck_QL008" data-code="QL008" class="tc_item">듣기문제길이_9단어 이상</a>
+															<a href="#" id="sck_QL009" data-code="QL009" class="tc_item">듣기지문길이_1인담화 90단어 미만</a>
+															<a href="#" id="sck_QL010" data-code="QL010" class="tc_item">듣기지문길이_1인담화 90단어 이상</a>
+															<a href="#" id="sck_QL011" data-code="QL011" class="tc_item">듣기지문길이_2인대화 100단어 미만</a>
+															<a href="#" id="sck_QL012" data-code="QL012" class="tc_item">듣기지문길이_2인대화 100단어 이상</a>
+															<a href="#" id="sck_QL013" data-code="QL013" class="tc_item">듣기지문길이_3인대화 100단어 미만</a>
+															<a href="#" id="sck_QL014" data-code="QL014" class="tc_item">듣기지문길이_3인대화 100단어 이상</a>
+														</div>
+														<div id="tag_group_QT" class="tag_codes_items">
+															<a href="#" id="sck_QT001" data-code="QT001" class="tc_item">문제구성_문법 1문제/어휘 2문제</a>
+															<a href="#" id="sck_QT002" data-code="QT002" class="tc_item">문제구성_문법 2문제/어휘 1문제</a>
+															<a href="#" id="sck_QT003" data-code="QT003" class="tc_item">문제구성_문법 3문제</a>
+															<a href="#" id="sck_QT004" data-code="QT004" class="tc_item">문제구성_보기가 단어/구 1문제</a>
+															<a href="#" id="sck_QT005" data-code="QT005" class="tc_item">문제구성_보기가 단어/구 2문제</a>
+															<a href="#" id="sck_QT006" data-code="QT006" class="tc_item">문제구성_보기가 단어/구 3문제</a>
+															<a href="#" id="sck_QT007" data-code="QT007" class="tc_item">문제구성_보기가 모두 단어/구</a>
+															<a href="#" id="sck_QT008" data-code="QT008" class="tc_item">문제구성_보기가 모두 문장</a>
+															<a href="#" id="sck_QT009" data-code="QT009" class="tc_item">문제구성_보기가 문장 1문제</a>
+															<a href="#" id="sck_QT010" data-code="QT010" class="tc_item">문제구성_보기가 문장 2문제</a>
+															<a href="#" id="sck_QT011" data-code="QT011" class="tc_item">문제구성_보기가 문장 3문제</a>
+															<a href="#" id="sck_QT012" data-code="QT012" class="tc_item">문제구성_사실확인 유형 1문제</a>
+															<a href="#" id="sck_QT013" data-code="QT013" class="tc_item">문제구성_사실확인 유형 2문제</a>
+															<a href="#" id="sck_QT014" data-code="QT014" class="tc_item">문제구성_사실확인 유형 3문제</a>
+															<a href="#" id="sck_QT015" data-code="QT015" class="tc_item">문제구성_세부사항 확인 유형 1문제</a>
+															<a href="#" id="sck_QT016" data-code="QT016" class="tc_item">문제구성_세부사항 확인 유형 2문제</a>
+															<a href="#" id="sck_QT017" data-code="QT017" class="tc_item">문제구성_세부사항 확인 유형 3문제</a>
+															<a href="#" id="sck_QT018" data-code="QT018" class="tc_item">문제구성_어휘 3문제</a>
+															<a href="#" id="sck_QT019" data-code="QT019" class="tc_item">문제구성_연계유형 1문제</a>
+															<a href="#" id="sck_QT020" data-code="QT020" class="tc_item">문제구성_연계유형 2문제</a>
+															<a href="#" id="sck_QT021" data-code="QT021" class="tc_item">문제구성_연계유형 3문제</a>
+															<a href="#" id="sck_QT022" data-code="QT022" class="tc_item">문제구성_추론유형 1문제</a>
+															<a href="#" id="sck_QT023" data-code="QT023" class="tc_item">문제구성_추론유형 2문제</a>
+															<a href="#" id="sck_QT024" data-code="QT024" class="tc_item">문제구성_추론유형 3문제</a>
+															<a href="#" id="sck_QT025" data-code="QT025" class="tc_item">문제구성_문장삽입유형 1문제</a>
+														</div>
+														<div id="tag_group_QA" class="tag_codes_items">
+															<a href="#" id="sck_QA001" data-code="QA001" class="tc_item">보기구성_규칙 O_격변화</a>
+															<a href="#" id="sck_QA002" data-code="QA002" class="tc_item">보기구성_규칙 O_수일치</a>
+															<a href="#" id="sck_QA003" data-code="QA003" class="tc_item">보기구성_규칙 O_시제변화</a>
+															<a href="#" id="sck_QA004" data-code="QA004" class="tc_item">보기구성_규칙 O_어형변화</a>
+															<a href="#" id="sck_QA005" data-code="QA005" class="tc_item">보기구성_규칙 X_관용표현</a>
+															<a href="#" id="sck_QA006" data-code="QA006" class="tc_item">보기구성_규칙 X_문법</a>
+															<a href="#" id="sck_QA007" data-code="QA007" class="tc_item">보기구성_규칙 X_어휘의미</a>
+															<a href="#" id="sck_QA008" data-code="QA008" class="tc_item">보기구성_규칙 X_용법</a>
+														</div>
+														<div id="tag_group_QN" class="tag_codes_items">
+
+														</div>
+														<div id="tag_group_CG" class="tag_codes_items">
+
+														</div>
+														<div id="tag_group_CQ" class="tag_codes_items">
+
+														</div>
+														<div id="tag_group_CP" class="tag_codes_items">
+
+														</div>
+														<div id="tag_group_CA" class="tag_codes_items">
+
+														</div>
+														<div id="tag_group_CR" class="tag_codes_items">
+
+														</div>
+														<div id="tag_group_CT" class="tag_codes_items">
+
+														</div>
+														<div id="tag_group_PR" class="tag_codes_items">
+
+														</div>
+														<div id="tag_group_BS" class="tag_codes_items">
+
+														</div>
+														<div id="tag_group_BC" class="tag_codes_items">
+
+														</div>
+														<div id="tag_group_BP" class="tag_codes_items">
+
+														</div>
+														<div id="tag_group_TR" class="tag_codes_items">
+
+														</div>
+													</div>
+													<!-- //tag_codes_box -->
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<select name="" title="" style="width:300px" class="search_items" data-type="select" data-name="R/L">
+														<option value="">LC/RC</option>
+														<option value="1">LC</option>
+														<option value="2">RC</option>
+													</select>&nbsp;
+													<select name="" title="" style="width:598px" class="search_items" data-type="select" data-name="출처영역">
+														<option value="">출처영역</option>
+														<option value="A">기본완성 LC(A#00000)</option>
+														<option value="B">기본완성 RC(B#00000)</option>
+														<option value="C">실력완성 LC(C#00000)</option>
+														<option value="D">실력완성 RC(D#00000)</option>
+														<option value="E">고득점완성 LC(E#00000)</option>
+														<option value="F">고득점완성 RC(F#00000)</option>
+														<option value="G">적중실전 Vol. 1 LC(G#00000)</option>
+														<option value="H">적중실전 Vol. 1 RC(H#00000)</option>
+														<option value="I">적중실전 Vol. 2 LC(I#00000)</option>
+														<option value="J">적중실전 Vol. 2 RC(J#00000)</option>
+														<option value="K">보카(K#00000)</option>
+														<option value="L">실전 1000제 Vol. 1 LC(L#00000)</option>
+														<option value="M">실전 1000제 Vol. 1 RC(M#00000)</option>
+														<option value="N">추가교재(N#00000)</option>
+														<option value="O">추가교재(O#00000)</option>
+														<option value="P">추가교재(P#00000)</option>
+														<option value="Q">추가교재(Q#00000)</option>
+														<option value="R">추가교재(R#00000)</option>
+														<option value="S">추가교재(S#00000)</option>
+														<option value="T">추가교재(T#00000)</option>
+														<option value="U">추가교재(U#00000)</option>
+														<option value="V">모의토익(V#00000)</option>
+														<option value="YYMM">기출문제(YYMM#00000)</option>
+													</select>
+												</td>
+											</tr>
+										</tbody></table>
+									</div>
+									<!-- //criteria_box -->
+								</div>
+								<!-- //search_criteria -->
+							</div>
+							<!-- //searchDep -->
+
+							<!-- criteria_result -->
+							<div class="criteria_result">
+								<table summary="검색" class="sheetSearch">
+									<caption>검색 테이블</caption>
+									<colgroup>
+										<col style="width:70%">
+										<col>
+									</colgroup>
+									<tbody><tr>
+										<td>
+											<div class="criteria_result_box" id="search_result_target01">
+												<em class="sbj">검색 조건</em>
+												<div class="cont"></div>
+											</div>
+
+											<div class="criteria_result_box" id="search_result_target02">
+												<em class="sbj">상세 검색</em>
+												<div class="cont"></div>
+											</div>
+										</td>
+										<td>
+											<select name="pageTerm" title="" style="width:100%">
+												<option value="20" selected="">20 페이지</option>
+												<option value="30">30 페이지</option>
+												<option value="40">40 페이지</option>
+												<option value="50">50 페이지</option>
+												<option value="60">60 페이지</option>
+												<option value="70">70 페이지</option>
+												<option value="80">80 페이지</option>
+												<option value="90">90 페이지</option>
+												<option value="100">100 페이지</option>
+												<option value="110">110 페이지</option>
+												<option value="120">120 페이지</option>
+												<option value="130">130 페이지</option>
+												<option value="140">140 페이지</option>
+												<option value="150">150 페이지</option>
+												<option value="160">160 페이지</option>
+												<option value="170">170 페이지</option>
+												<option value="180">180 페이지</option>
+												<option value="190">190 페이지</option>
+												<option value="200">200 페이지</option>
+											</select>
+
+											<div class="btns">
+												<button type="submit" class="btnF"><span>검색</span></button>
+												<button type="button" class="btnF ver6"><span>엑셀</span></button>
+											</div>
+										</td>
+									</tr>
+								</tbody></table>
+							</div>
+							<button type="button" class="trigger" data-target="criteria_box"><span>검색 조건 더 보기</span></button>
+							<!-- //criteria_result -->
+						</div>
+						<!-- //searchBox -->
+
+						<table summary="문제 조합" class="sheetListB">
+							<caption>문제 조합 목록</caption>
+							<colgroup>
+								<col style="width:10%">
+								<col style="width:14%">
+								<col>
+								<col style="width:10%">
+								<col style="width:12%">
+								<col style="width:12%">
+								<col style="width:14%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">사용체크</th>
+									<th scope="col"><a href="#" class="sort">고유번호</a></th>
+									<th scope="col"><a href="#" class="sort desc">제목</a></th>
+									<th scope="col"><a href="#" class="sort">오답률</a></th>
+									<th scope="col">미리보기</th>
+									<th scope="col"><a href="#" class="sort">등록자</a></th>
+									<th scope="col" class="last_child"><a href="#" class="sort">등록/수정일</a></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input type="checkbox" name="" title="사용안함" /></td>
+									<td>API#00055</td>
+									<td class="subject">기본완성_P1</td>
+									<td> - </td>
+									<td>
+										<a href="#" class="btnH"><span>PC</span></a>
+										<a href="#" class="btnH ver2"><span>M</span></a>
+									</td>
+									<td>RnD관리자</td>
+									<td>20171218</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" title="사용안함" /></td>
+									<td>API#00055</td>
+									<td class="subject">기본완성_P1</td>
+									<td> - </td>
+									<td>
+										<a href="#" class="btnH"><span>PC</span></a>
+										<a href="#" class="btnH ver2"><span>M</span></a>
+									</td>
+									<td>RnD관리자</td>
+									<td>20171218</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" title="사용안함" /></td>
+									<td>API#00055</td>
+									<td class="subject">기본완성_P1</td>
+									<td> - </td>
+									<td>
+										<a href="#" class="btnH"><span>PC</span></a>
+										<a href="#" class="btnH ver2"><span>M</span></a>
+									</td>
+									<td>RnD관리자</td>
+									<td>20171218</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="paging">
+							<img src="../common/images/ico/ico_prv02.png" alt="처음 페이지" />
+							<img src="../common/images/ico/ico_prv.png" alt="이전 페이지" />
+							<span>
+								<a href="#" class="current">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+							</span>
+							<img src="../common/images/ico/ico_next.png" alt="다음 페이지" />
+							<img src="../common/images/ico/ico_next02.png" alt="마지막 페이지" />
+						</div>
+					</div>
+
+					<!-- section -->
+					<div class="section">
+						<h4 class="sectionTitleA">문제 조합</h4>
+
+						<div class="tabA">
+							<ul>
+								<li class="active"><a href="#">Part 1</a></li>
+								<li><a href="#">Part 2</a></li>
+								<li><a href="#">Part 3</a></li>
+								<li><a href="#">Part 4</a></li>
+								<li><a href="#">Part 5</a></li>
+								<li><a href="#">Part 6</a></li>
+								<li><a href="#">Part 7</a></li>
+							</ul>
+						</div>
+
+						<!-- list -->
+						<div class="sheetTotal">
+							<strong>003</strong> / 050
+						</div>
+
+						<table summary="문제 조합" class="sheetListB">
+							<caption>문제 조합 목록</caption>
+							<colgroup>
+								<col style="width:8%">
+								<col style="width:7%">
+								<col style="width:12%">
+								<col>
+								<col style="width:8%">
+								<col style="width:10%">
+								<col style="width:10%">
+								<col style="width:10%">
+								<col style="width:12%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">사용안함체크</th>
+									<th scope="col">순서</th>
+									<th scope="col"><a href="#" class="sort">고유번호</a></th>
+									<th scope="col"><a href="#" class="sort desc">제목</a></th>
+									<th scope="col"><a href="#" class="sort">오답률</a></th>
+									<th scope="col">미리보기</th>
+									<th scope="col">수정</th>
+									<th scope="col"><a href="#" class="sort">등록자</a></th>
+									<th scope="col" class="last_child"><a href="#" class="sort">등록/수정일</a></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input type="checkbox" name="" title="사용안함" /></td>
+									<td><input type="text" name="" value="1" title="순서" style="width:100%" /></td>
+									<td>API#00055</td>
+									<td class="subject">기본완성_P1</td>
+									<td> - </td>
+									<td>
+										<a href="#" class="btnH"><span>PC</span></a>
+										<a href="#" class="btnH ver2"><span>M</span></a>
+									</td>
+									<td>
+										<a href="#" class="btnA ver2"><span>수정</span></a>
+									</td>
+									<td>RnD관리자</td>
+									<td>20171218</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" title="사용안함" /></td>
+									<td><input type="text" name="" value="1" title="순서" style="width:100%" /></td>
+									<td>API#00055</td>
+									<td class="subject">기본완성_P1</td>
+									<td> - </td>
+									<td>
+										<a href="#" class="btnH"><span>PC</span></a>
+										<a href="#" class="btnH ver2"><span>M</span></a>
+									</td>
+									<td>
+										<a href="#" class="btnA ver2"><span>수정</span></a>
+									</td>
+									<td>RnD관리자</td>
+									<td>20171218</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" title="사용안함" /></td>
+									<td><input type="text" name="" value="1" title="순서" style="width:100%" /></td>
+									<td>API#00055</td>
+									<td class="subject">기본완성_P1</td>
+									<td> - </td>
+									<td>
+										<a href="#" class="btnH"><span>PC</span></a>
+										<a href="#" class="btnH ver2"><span>M</span></a>
+									</td>
+									<td>
+										<a href="#" class="btnA ver2"><span>수정</span></a>
+									</td>
+									<td>RnD관리자</td>
+									<td>20171218</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="paging">
+							<img src="../common/images/ico/ico_prv02.png" alt="처음 페이지" />
+							<img src="../common/images/ico/ico_prv.png" alt="이전 페이지" />
+							<span>
+								<a href="#" class="current">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+							</span>
+							<img src="../common/images/ico/ico_next.png" alt="다음 페이지" />
+							<img src="../common/images/ico/ico_next02.png" alt="마지막 페이지" />
+						</div>
+						<!-- //list -->
+
+						<div class="btnWrap">
+							<div class="btnLeft">
+								<button type="button" class="btnA ver5"><span>문제 사용 안함</span></button>
+							</div>
+							<div class="btnRight">
+								<span class="btnE"><span>총 문제 (006/040)</span></span>
+								<a href="#" class="btnA ver4"><span>미리보기 PC</span></a>
+								<a href="#" class="btnA ver4"><span>미리보기 MO</span></a>
+								<a href="#" class="btnA"><span>저장</span></a>
+							</div>
+						</div>
+					</div>
+					<!-- //section -->
+				</div>
+				<!-- //list Form -->
+			</div>
+			<!-- //contents -->
+		</div>
+		<!-- //container body -->
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<em class="copyright">
+			Copyright© PAGODA SCS Inc. All rights reserved.
+		</em>
+	</div>
+	<!-- //footer -->
+</div>
+
+<script src="../common/js/admin.js" type="text/javascript"></script>
+</body>
+</html>

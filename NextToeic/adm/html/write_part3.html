@@ -1,0 +1,737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title> Next Toeic </title>
+	<link rel="stylesheet" type="text/css" href="../common/css/admin.css" />
+	<link rel="stylesheet" type="text/css" href="../common/css/jquery-ui.css" />
+	<script type="text/javascript" src="../common/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery-migrate-3.0.0.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery-ui.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- header_container -->
+		<div class="header_container">
+			<!-- head -->
+			<div class="head">
+				<div class="wrapper">
+					<h1>
+						<a href="#">
+							<img src="../common/images/logo.png" alt="넥스트 토익" />
+							<span>CMS/LMS</span>
+						</a>
+					</h1>
+					<ul class="lnb">
+						<li>
+							<a href="#">문제등록<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">Part별 문제 등록</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">시험 등록<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">시험 등록</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">문제 검색<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">출처</a></li>
+									<li><a href="#">입력 시점</a></li>
+									<li><a href="#">입력/수정자</a></li>
+									<li><a href="#">파트</a></li>
+									<li><a href="#">태그</a></li>
+									<li><a href="#">제목</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">결과 리포트<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">태그별 정보</a></li>
+									<li><a href="#">환산 정보</a></li>
+									<li><a href="#">등급별 정보</a></li>
+									<li><a href="#">학업 성취 정보(예정)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">단어 관리<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">단어 등록/수정</a></li>
+									<li><a href="#">단어 TEST</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">OMR<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">데이터 모음(예정)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">이용 현황<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">문제별 - 사용(유무) 현황</a></li>
+									<li><a href="#">문제별 - 사용(시험등록) 현황</a></li>
+									<li><a href="#">문제별 - 오답 현황</a></li>
+									<li><a href="#">문제별 - 평균 풀이 시간</a></li>
+									<li><a href="#">시험별 - 응시 현황</a></li>
+									<li><a href="#">시험별 - 풀이 시간</a></li>
+									<li><a href="#">이용자별</a></li>
+									<li><a href="#">태그별</a></li>
+									<li><a href="#">그레이드별</a></li>
+									<li><a href="#">OMR (예정)</a></li>
+									<li><a href="#">로그 기록(예정)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">태그 관리<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">태그 등록/수정</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">권한 관리<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">관리자 등록(예정)</a></li>
+									<li><a href="#">전체 권한 메뉴(예정)</a></li>
+									<li><a href="#">내정보수정</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //head -->
+
+			<!-- headerInfo -->
+			<div class="headerInfo">
+				<div class="wrapper">
+					<div class="location">
+						<span>문제등록</span>
+						<span class="current">part별 문제 등록</span>
+					</div>
+					<ul class="info">
+						<li><em><a href="#">관리자님</a></em> 안녕하세요.</li>
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">홈으로 바로가기</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //headerInfo -->
+		</div>
+		<!-- //header_container -->
+
+		<span class="menu_logo">
+			<a href="#">
+				<img src="../common/images/logo.png" alt="넥스트 토익" /><br>
+				<span>CMS/LMS</span>
+			</a>
+		</span>
+		<button type="button" class="btn_menu">
+			<span>메뉴보기</span>
+			<div class="bar top"></div>
+			<div class="bar middle"></div>
+			<div class="bar bottom"></div>
+		</button>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- container body -->
+		<div id="contents">
+			<!-- contents -->
+			<div class="contents">
+				<!-- title -->
+				<h3 class="titleA">Part별 문제 등록</h3>
+				<!-- //title -->
+
+				<div id="writeForm">
+					<!-- write section -->
+					<div class="section">
+						<h4 class="sectionTitleA">STEP1. 기본정보 입력</h4>
+
+						<div class="absolBtns">
+							<a href="#" class="btnA ver4"><span>전체 등록</span></a>
+							<a href="#" class="btnA"><span>목록으로</span></a>
+						</div>
+
+						<table summary="기본정보 입력" class="sheetWriteA">
+							<caption>기본정보 입력폼</caption>
+							<colgroup>
+								<col style="width:13%">
+								<col style="width:37%">
+								<col style="width:13%">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">부서</th>
+									<td colspan="3">
+										<select name="" id="" title="부서">
+											<option value="">부서선택</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">등록자</th>
+									<td colspan="3">
+										RnD관리자 (2017-11-20)
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">출처정보</th>
+									<td colspan="3">
+										<select name="" id="" title="출처정보">
+											<option value="">실전 100제 Vol. 1 RC</option>
+										</select>
+
+										<select name="" id="" title="출처정보">
+											<option value="">P7</option>
+										</select>
+
+										<select name="" id="" title="출처정보">
+											<option value="">RC</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">제목/키워드</th>
+									<td colspan="3">
+										<input type="text" name="" value="실전 100제 Vol. 1 RC, Part7, RC" title="제목/키워드" style="width:50%" readonly>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">문제 제외 여부</th>
+									<td colspan="3">
+										<div class="radioWrap">
+											<label>
+												<input type="radio" name="" value="" checked>
+												치료 문제로 포함함
+											</label>
+
+											<label>
+												<input type="radio" name="" value="">
+												치료 문제로 제외함
+											</label>
+
+											<label style="margin-left:100px;">
+												<input type="radio" name="" value="" checked>
+												900점 모의고사 포함함
+											</label>
+
+											<label>
+												<input type="radio" name="" value="">
+												900점 모의고사 제외함
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">생성/수정정보</th>
+									<td colspan="3" class="bg_sky">
+										<span class="items"><em>2017-12-18</em>( RnD관리자 )</span>
+										<span class="items"><em>2017-11-20</em>( RnD관리자 )</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //write section -->
+
+					<!-- write section -->
+					<div id="exam_info_step02" class="section">
+						<h4 class="sectionTitleA">STEP2. 문제 정보 입력</h4>
+
+						<div class="absolBtns">
+							<a href="#" class="btnA ver4 btn_partial_submit" data-target="exam_info_step02"><span>전체 등록</span></a>
+							<a href="#" class="btnA"><span>목록으로</span></a>
+						</div>
+
+						<table summary="문제 정보 입력" class="sheetWriteA">
+							<caption>문제 정보 입력폼</caption>
+							<colgroup>
+								<col style="width:13%">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">음성 <span class="required">*</span></th>
+									<td>
+
+										<div class="input_file">
+											<label><span>음성 첨부</span></label>
+											<em class="file_name"></em>
+											<input type="file" name="mp3[]" id="" />
+										</div>
+
+										<div class="audio_box"></div>
+										<!-- 수정시
+										<br>
+										<span class="voice_box">
+											<a href="#">Chrysanthemum.dda.mp3</a>
+											<button type="button" class="voice_delete"><img src="../common/images/ico/ico_del.png" alt="삭제"></button>
+										</span>
+										//수정시 -->
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">음성 <span class="required">*</span></th>
+									<td>
+
+										<div class="input_file">
+											<label><span>음성 첨부</span></label>
+											<em class="file_name"></em>
+											<input type="file" name="mp3[]" id="" />
+										</div>
+
+										<div class="audio_box"></div>
+										<!-- 수정시
+										<br>
+										<span class="voice_box">
+											<a href="#">Chrysanthemum.dda.mp3</a>
+											<button type="button" class="voice_delete"><img src="../common/images/ico/ico_del.png" alt="삭제"></button>
+										</span>
+										//수정시 -->
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">음성 <span class="required">*</span></th>
+									<td>
+
+										<div class="input_file">
+											<label><span>음성 첨부</span></label>
+											<em class="file_name"></em>
+											<input type="file" name="mp3[]" id="" />
+										</div>
+
+										<div class="audio_box"></div>
+										<!-- 수정시
+										<br>
+										<span class="voice_box">
+											<a href="#">Chrysanthemum.dda.mp3</a>
+											<button type="button" class="voice_delete"><img src="../common/images/ico/ico_del.png" alt="삭제"></button>
+										</span>
+										//수정시 -->
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">억양 <span class="required">*</span></th>
+									<td>
+										<div class="radioWrap">
+											<label>
+												<input type="radio" name="voca" value="1" title="" />
+												미국
+											</label>
+											<label>
+												<input type="radio" name="voca" value="2" title="" />
+												영국
+											</label>
+											<label>
+												<input type="radio" name="voca" value="3" title="" />
+												호주
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">사진 <span class="required">*</span></th>
+									<td>
+										<div class="input_file">
+											<label><span>사진 첨부</span></label>
+											<input type="file" name="photo" id="" file-type="image" />
+
+											<div class="add_photo_box"></div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">문항</th>
+									<td>
+										<table summary="문항 정보" class="sheetWriteA">
+											<caption>문항 정보</caption>
+											<colgroup>
+												<col style="width:13%">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="col">정답여부</th>
+													<th scope="col" class="alignLeft">보기</th>
+												</tr>
+												<tr>
+													<th scope="row">
+														<label>
+															<input type="radio" name="exam" value="a" title="" />
+															A
+														</label>
+													</th>
+													<td class="td_multi">
+														<div class="part">
+															<input type="text" name="exam_a" title="" placeholder="보기 원문(A)을 입력해주세요." style="width:100%;" />
+														</div>
+														<div class="part">
+															<input type="text" name="exam_a_ca" title="" placeholder="보기 해석(A)을 입력해주세요." style="width:100%;" />
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<label>
+															<input type="radio" name="exam" value="b" title="" />
+															B
+														</label>
+													</th>
+													<td class="td_multi">
+														<div class="part">
+															<input type="text" name="exam_b" title="" placeholder="보기 원문(B)을 입력해주세요." style="width:100%;" />
+														</div>
+														<div class="part">
+															<input type="text" name="exam_b_ca" title="" placeholder="보기 해석(B)을 입력해주세요." style="width:100%;" />
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<label>
+															<input type="radio" name="exam" value="c" title="" />
+															C
+														</label>
+													</th>
+													<td class="td_multi">
+														<div class="part">
+															<input type="text" name="exam_c" title="" placeholder="보기 원문(C)을 입력해주세요." style="width:100%;" />
+														</div>
+														<div class="part">
+															<input type="text" name="exam_c_ca" title="" placeholder="보기 해석(C)을 입력해주세요." style="width:100%;" />
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<label>
+															<input type="radio" name="exam" value="d" title="" />
+															D
+														</label>
+													</th>
+													<td class="td_multi">
+														<div class="part">
+															<input type="text" name="exam_d" title="" placeholder="보기 원문(D)을 입력해주세요." style="width:100%;" />
+														</div>
+														<div class="part">
+															<input type="text" name="exam_d_ca" title="" placeholder="보기 해석(D)을 입력해주세요." style="width:100%;" />
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">해석 <span class="required">*</span></th>
+									<td>
+										<img src="../common/images/sample/edit_img.png" alt="">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">어휘</th>
+									<td>
+										<div class="addWrap">
+											<div class="head">
+												<strong>어휘검색</strong> &nbsp;
+												<input type="text" name="" title="" class="auto_search_input" style="width:150px;" data-url="http://jqueryui.com/resources/demos/autocomplete/search.php" />
+											</div>
+
+											<div class="search_result_join"></div>
+											<div class="addItems"></div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">태그</th>
+									<td>
+										<div class="addWrap">
+											<div class="head">
+												<strong>태그검색</strong> &nbsp;
+												<input type="text" name="" title="" class="auto_search_input" style="width:150px;" data-url="http://jqueryui.com/resources/demos/autocomplete/search.php" />
+											</div>
+
+											<div class="search_result_join"></div>
+											<div class="addItems"></div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //write section -->
+
+					<!-- write section -->
+					<div class="section">
+						<h4 class="sectionTitleA">STEP3. 문제 정보 입력</h4>
+
+						<table summary="지문 입력" class="sheetWriteA">
+							<caption>지문 입력폼</caption>
+							<colgroup>
+								<col style="width:13%">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">문제</th>
+									<td colspan="3">
+										<button type="button" class="btnA qu_type_add" data-target="add_container01"><span>추가</span></button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<!-- addContentsItem -->
+						<div id="add_container01" class="addContentsItem">
+							<div class="addBox">
+								<span class="label"><input type="text" name="" value="1" title="" style="width:30px; height:20px; border:none; outline:none; background:#666; color:#fff;"></span>
+								<table summary="문제 정보" class="sheetWriteA">
+									<caption>문제 정보 입력</caption>
+									<colgroup>
+										<col style="width:13%">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">음성 <span class="required">*</span></th>
+											<td>
+												<div class="input_file">
+													<label><span>음성 첨부</span></label>
+													<em class="file_name"></em>
+													<input type="file" name="mp3[]" id="" data-index="1">
+												</div>
+												<div class="audio_box"></div>
+
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">문제(영문) <span class="required">*</span></th>
+											<td>
+												<input type="text" name="QUESTION_EN[]" title="" placeholder="보기 원문(A)을 입력해주세요." style="width:100%;">
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">문제(한글) <span class="required">*</span></th>
+											<td>
+												<input type="text" name="QUESTION_KO[]" title="" placeholder="보기 원문(A)을 입력해주세요." style="width:100%;">
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">문항 <span class="required">*</span></th>
+											<td>
+												<table summary="문항 정보" class="sheetWriteA">
+													<caption>문항 정보</caption>
+													<colgroup>
+														<col style="width:13%">
+														<col>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th scope="col">정답여부</th>
+															<th scope="col" class="alignLeft">보기</th>
+														</tr>
+														<tr>
+															<th scope="row">
+																<label>
+																	<input type="radio" name="ANSWER[0]" class="ANSWER" title=""> A
+																</label>
+															</th>
+															<td class="td_multi">
+																<div class="part">
+																	<input type="text" name="PASSAGE01_EN[0]" title="" placeholder="보기 원문(A)을 입력해주세요." style="width:100%;">
+																</div>
+																<div class="part">
+																	<input type="text" name="PASSAGE01_KO[0]" title="" placeholder="보기 해석(A)을 입력해주세요." style="width:100%;">
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">
+																<label>
+																	<input type="radio" name="ANSWER[0]" class="ANSWER" title=""> B
+																</label>
+															</th>
+															<td class="td_multi">
+																<div class="part">
+																	<input type="text" name="PASSAGE02_EN[0]" title="" placeholder="보기 원문(B)을 입력해주세요." style="width:100%;">
+																</div>
+																<div class="part">
+																	<input type="text" name="PASSAGE02_KO[0]" title="" placeholder="보기 해석(B)을 입력해주세요." style="width:100%;">
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">
+																<label>
+																	<input type="radio" name="ANSWER[0]" class="ANSWER" title=""> C
+																</label>
+															</th>
+															<td class="td_multi">
+																<div class="part">
+																	<input type="text" name="PASSAGE03_EN[0]" title="" placeholder="보기 원문(C)을 입력해주세요." style="width:100%;">
+																</div>
+																<div class="part">
+																	<input type="text" name="PASSAGE03_KO[0]" title="" placeholder="보기 해석(C)을 입력해주세요." style="width:100%;">
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">
+																<label>
+																	<input type="radio" name="ANSWER[0]" class="ANSWER" title=""> D
+																</label>
+															</th>
+															<td class="td_multi">
+																<div class="part">
+																	<input type="text" name="PASSAGE04_EN[0]" title="" placeholder="보기 원문(D)을 입력해주세요." style="width:100%;">
+																</div>
+																<div class="part">
+																	<input type="text" name="PASSAGE04_KO[0]" title="" placeholder="보기 해석(D)을 입력해주세요." style="width:100%;">
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">해설 <span class="required">*</span></th>
+											<td> <textarea name="EXPLANATION[0]" title="" rows="3" class="textareaA"></textarea> </td>
+										</tr>
+										<tr>
+											<th scope="row">태그 <span class="required">*</span></th>
+											<td>
+												<div class="addWrap">
+													<div class="head">
+														<strong>태그검색</strong> &nbsp;
+														<input type="text" name="tag_search" class="auto_search_input" style="width:150px;" data-url="http://nextadm.pagodastar.com/question/tag_search">
+													</div>
+
+													<div class="search_result_join"></div>
+													<div class="addItems"></div>
+													<input type="hidden" name="TAG_SEQ[]" class="auto_input" data-url="http://nextadm.pagodastar.com/question/tag_search">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">생성/수정정보</th>
+											<td class="bg_sky">
+												<span class="items"><em>2017-12-18</em>( RnD관리자 )</span>
+												<span class="items"><em>2017-11-20</em>( RnD관리자 )</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="btnWrap">
+									<div class="btnCenter">
+										<a href="#" class="btnA ver5 qu_type_del"><span>삭제</span></a>
+										<a href="#" class="btnA"><span>저장</span></a>
+										<a href="#" class="btnA ver4"><span>미리보기(PC)</span></a>
+										<a href="#" class="btnA ver4"><span>미리보기(Mobile)</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //write section -->
+
+					<div class="btnWrap">
+						<div class="btnCenter">
+							<button type="button" class="btnB"><span>전체 등록</span></button>
+							<button type="button" class="btnB ver2"><span>목록으로</span></button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- //contents -->
+		</div>
+		<!-- //container body -->
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<em class="copyright">
+			Copyright© PAGODA SCS Inc. All rights reserved.
+		</em>
+	</div>
+	<!-- //footer -->
+</div>
+
+<script src="../common/js/admin.js" type="text/javascript"></script>
+<script>
+var parial;
+
+partial = {
+	file_init : (obj) => {
+		var this_obj,
+			target_form,
+			this_file,
+			this_name,
+			other_data;
+
+		this_obj = obj;
+		target_form = $('#'+this_obj.attr('data-target'));
+		var formData = new FormData();
+
+		$.each(target_form.find('input:file'), function(){
+			this_file = $(this)[0].files[0];
+			this_name = $(this).attr('name');
+			if(this_file) formData.append(this_name, this_file);
+			if(this_name == '') console.log('name값이 미설정 되었습니다.');
+		});
+
+
+		other_data = target_form.find(':input').serializeArray();
+		$.each(other_data,function(key, input){
+			formData.append(input.name, input.value);
+		});
+
+		$.ajax({
+			url: 'http://nextadm.pagodastar.com/question/question_proc',
+			type: 'POST',
+			dataType:'json',
+			data: formData,
+			processData: false,
+			contentType: false,
+			success: function(data){
+				console.log(data);
+			}
+		});
+	}
+}
+$(document).on('click', '.btn_partial_submit', function(){
+	var this_form_data;
+
+	this_form_data = partial.file_init($(this));
+});
+</script>
+</body>
+</html>

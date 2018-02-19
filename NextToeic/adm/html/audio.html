@@ -1,0 +1,18 @@
+<input type="file" name="file[]" class="file_audio" accept="audio/*">
+
+<audio width="400" controls>
+  <source src="mov_bbb.mp4" id="video_here">
+    Your browser does not support HTML5 video.
+</audio>
+
+
+<script src='http://code.jquery.com/jquery-1.11.2.min.js'></script>
+<script type="text/javascript">
+<!--
+	$(document).on("change", ".file_audio", function(evt) {
+		var $source = $('#video_here');
+		$source[0].src = URL.createObjectURL(this.files[0]);
+		$source.parent()[0].load();
+	});
+//-->
+</script>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta name="format-detection" content="telephone=no">
+	<title>파고다스타</title>
+	<link rel="apple-touch-icon" href=""/>
+	<link rel="shortcut icon" href="" />
+	<meta name="naver-site-verification" content="44fa86ea3842f66f8fb901f9dd7d9d24bcb1256f"/>
+	<meta name="description" content="파고다 1위 스타강사의 토익, 토플, 중국어, HSK, 일본어, JLPT, 아이엘츠, 오픽, 토익스피킹, 기초영어, 취업관련 인터넷강의 서비스">
+	<link rel="stylesheet" href="../../common/mo/css/swiper.css" />
+	<link rel="stylesheet" href="../../common/mo/css/common.css" />
+	<link rel="stylesheet" href="../../common/mo/css/layout.css" />
+	<link rel="stylesheet" href="../../common/mo/css/contents.css" />
+	<link rel="stylesheet" href="../../common/mo/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../common/mo/css/jplayer.css" />
+	<script src="../../common/mo/js/jquery-3.2.1.min.js"></script>
+	<script src="../../common/mo/js/jquery-migrate-3.0.0.min.js"></script>
+	<script src="../../common/mo/js/swiper.min.js"></script>
+	<script src="../../common/mo/js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="../../common/mo/js/jplayer.playlist.min.js"></script>
+</head>
+<body>
+	<!-- device -->
+	<div id="device" class="iphone5">
+		<!-- device_outer -->
+		<div class="device-outer">
+
+			<div class="preview-tab">
+				<div class="display-table">
+					<a href="#" class="active"><span>테스트</span></a>
+					<a href="#"><span>정오답</span></a>
+				</div>
+			</div>
+
+			<div class="device-status"><img src="../../common/mo/images/icon/icon_status.png" alt=""></div>
+			<!-- device_wrap -->
+			<div id="device-wrap">
+				<iframe src="common_01_test.html" frameborder="0"></iframe>
+			</div>
+			<!-- //device_wrap -->
+		</div>
+		<!-- //device_outer -->
+
+		<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+		<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+			<div class="jp-type-playlist">
+				<div class="jp-gui jp-interface">
+					<div class="jp-controls">
+						<a href="#" class="prev jp-previous">이전</a>
+						<button class="jp-play" role="button" tabindex="0">play</button>
+						<a href="#" class="next jp-next">다음</a>
+					</div>
+					<div class="jp-time-holder">
+						<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+						<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+					</div>
+					<div class="jp-progress">
+						<div class="jp-seek-bar">
+							<div class="jp-play-bar"><em></em></div>
+						</div>
+					</div>
+					<div class="jp-volume-controls">
+						<button class="jp-mute" role="button" tabindex="0">mute</button>
+						<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+						<div class="jp-volume-bar">
+							<div class="jp-volume-bar-value"></div>
+						</div>
+					</div>
+
+					<div class="jp-toggles">
+						<button class="jp-repeat" role="button" tabindex="0">repeat</button>
+						<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+					</div>
+				</div>
+				<div class="jp-playlist">
+					<ul>
+						<li>&nbsp;</li>
+					</ul>
+				</div>
+				<div class="jp-no-solution">
+					<span>Update Required</span>
+					To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //device -->
+
+	<script src="../../common/mo/js/nt.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	$(document).ready(function(){
+
+		new jPlayerPlaylist({
+			jPlayer: "#jquery_jplayer_1",
+			cssSelectorAncestor: "#jp_container_1"
+		}, [
+			{
+				title:"Cro Magnon Man",
+				mp3:"http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"
+			},
+			{
+				title:"Your Face",
+				mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3"
+			},
+			{
+				title:"Cyber Sonnet",
+				mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3"
+			},
+			{
+				title:"Tempered Song",
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"
+			},
+			{
+				title:"Hidden",
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3"
+			},
+			{
+				title:"Lentement",
+				free:true,
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-03-Lentement.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/Miaow-03-Lentement.ogg"
+			},
+			{
+				title:"Lismore",
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-04-Lismore.mp3"
+			},
+			{
+				title:"The Separation",
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-05-The-separation.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/Miaow-05-The-separation.ogg"
+			},
+			{
+				title:"Beside Me",
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-06-Beside-me.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/Miaow-06-Beside-me.ogg"
+			},
+			{
+				title:"Bubble",
+				free:true,
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+			},
+			{
+				title:"Stirring of a Fool",
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-08-Stirring-of-a-fool.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/Miaow-08-Stirring-of-a-fool.ogg"
+			},
+			{
+				title:"Partir",
+				free: true,
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-09-Partir.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/Miaow-09-Partir.ogg"
+			},
+			{
+				title:"Thin Ice",
+				mp3:"http://www.jplayer.org/audio/mp3/Miaow-10-Thin-ice.mp3",
+				oga:"http://www.jplayer.org/audio/ogg/Miaow-10-Thin-ice.ogg"
+			}
+		], {
+			swfPath: "../../dist/jplayer",
+			supplied: "oga, mp3",
+			wmode: "window",
+			useStateClassSkin: true,
+			autoBlur: false,
+			smoothPlayBar: true,
+			keyEnabled: true
+		});
+
+		$('.jump').on('click', function(){
+			$('#jp_container_1').jPlayer("playHead", 10);
+		});
+	});
+	//]]>
+	</script>
+</body>
+</html>

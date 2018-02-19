@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta name="format-detection" content="telephone=no">
+	<title>파고다스타</title>
+	<link rel="apple-touch-icon" href=""/>
+	<link rel="shortcut icon" href="" />
+	<meta name="naver-site-verification" content="44fa86ea3842f66f8fb901f9dd7d9d24bcb1256f"/>
+	<meta name="description" content="파고다 1위 스타강사의 토익, 토플, 중국어, HSK, 일본어, JLPT, 아이엘츠, 오픽, 토익스피킹, 기초영어, 취업관련 인터넷강의 서비스">
+	<!-- jquery mobile css-->
+	<link rel="stylesheet" href="/asset/jmobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<!-- //jquery mobile css -->
+	<link rel="stylesheet" href="../../common/mo/css/swiper.css" />
+
+	<!--추후에 CSS footer에서만 사용하기때문에 필요한 스타일만 NT폴더로 빼주시면 됩니다.-->
+	<link rel="stylesheet" href="/asset/skin/mint/mobile/css/common.css" />
+	<link rel="stylesheet" href="../../common/mo/css/pasta_m.css" />
+	<link rel="stylesheet" href="../../common/mo/css/ui.css" />
+	<!--//-->
+	<script src="../../common/mo/js/jquery-3.2.1.min.js"></script>
+	<script src="../../common/mo/js/jquery-migrate-3.0.0.min.js"></script>
+
+	<!-- jquery mobile js -->
+	<script>
+	$(document).on("mobileinit", function() {
+		var silentScroll = $.mobile.silentScroll;
+		$.mobile.silentScroll = function(ypos) {
+			if($.type(ypos) !== "number") {
+				return;
+			} else {
+				silentScroll.apply(this, arguments);
+			}
+		}
+	});
+	</script>
+	<script src="/asset/jmobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<!-- //jquery mobile js -->
+
+	<!-- 사용자 옵션 js -->
+	<script src="../../common/mo/js/common_function.js"></script>
+	<script src="../../common/mo/js/gangnam_function.js"></script>
+	<script src="/asset/skin/mbasil/js/TweenMax.min.js"></script>
+	<script language="javascript" type="text/javascript" src="../../common/mo/js/browser.detect.js"></script>
+	<!-- //사용자 옵션 js -->
+
+	<!-- 신규 js파일 -->
+	<script src="/asset/skin/mint/mobile/js/pagodastar.plugin.js"></script>
+	<script src="/asset/skin/mint/mobile/js/pagodastar.ui.js"></script>
+
+</head>
+<body class="pgds-main">
+	
+	<div class="content">
+		<!--클래스명 자유롭게 사용해주세요-->
+	</div>
+	<!-- footer -->
+	<footer class="pgds-footer">
+		<div class="footer_row1">
+			<ul>
+				<li><a href="http://m.pagodastar.com/m/boutique/pagoda_connect" target="_top">파고다인강 소개</a></li> 
+			</ul>
+			<ul>
+				<li><a href="">PC버전보기</a></li>
+				<li><a href="">APP다운로드</a></li>
+				<li><a href="">전화상담</a></li>
+			</ul>
+		</div>
+
+		<div class="footer_row2">
+			<ul class="utils">
+				<li><a href="">이용약관</a></li>
+				<li><a href="">개인정보취급방침</a></li>
+			</ul>
+
+			<strong class="logo"><a href="" class="pgds-sp">PAGODA STAR</a></strong>
+
+			<div class="infos">
+				<p>(주) 파고다에스씨에스 대표이사 박경실</p>
+				<p>서울특별시 서초구 강남대로 419(서초동)</p>
+				<p><span>TEL : 02-6907-2489</span><span class="nbar">FAX : 02-533-8066</span></p>
+				<p class="mail"><a href="mailto:paogdastar@pagoda21.com">MAIL: pagodastar@pagoda21.com</a></p>
+				<p><span>사업자등록번호 : 214-87-63551</span><strong><a href="">사업자정보확인</a></strong></p>
+				<p><span>통신판매신고 : 2005-서울서초-05273</span><strong><a href="">escrow 가입확인</a></strong></p>
+				<p class="copyright">Copyright© PAGODA SCS Inc. All rights reserved.</p>
+			</div>
+			<ul class="sns">
+				<li class="yt"><a href="" class="pgds-sp">youtube</a></li>
+				<li class="fb"><a href="" class="pgds-sp">facebook</a></li>
+				<li class="ntv"><a href="http://m.tvcast.naver.com/pagoda21" target="_blank" class="pgds-sp2">naver tv</a></li>
+				<li class="npost"><a href="http://m.post.naver.com/pagodastar" target="_blank" class="pgds-sp2">naver post</a></li>  
+			</ul>
+
+			<a href="" id="move_top" class="pgds-sp move_top">top move</a>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+	<section class="pgds-menubar">
+		<ul>
+			<li>
+				<a href="/" class="active ui-link">홈</a>
+			</li>
+			<li>
+				<a href="/m/foot/menu" class="ui-link">과목선택</a>
+			</li>
+			<li>
+				<a href="/m/foot/recent" class="ui-link">
+					최근본강의 <em class="num" id="sideBarRecentCnt">0</em>
+				</a>
+			</li>
+			<li>
+				<a href="/m/foot/my" class="ui-link">MY</a>
+			</li>
+		</ul>
+	</section>
+</body>
+</html>

@@ -1,0 +1,8 @@
+1. <div id="contents">에 들어가는 추가 class 조건
+- 인트로페이지 "intro-contents" <div id="contents" class="intro-contents">
+- TEST 안내페이지 "guide-contents" <div id="contents" class="guide-contents">
+
+2. <div class="contents-body">에 들어가는 추가 class 조건
+- TEST 페이지 "ver-test" <div class="contents-body" class="ver-test">
+- TEST 취약영역안내 페이지 "ver-weak" <div class="contents-body" class="ver-weak">
+- 정오답 페이지에서는 "ver-ca" <div class="contents-body" class="ver-ca">

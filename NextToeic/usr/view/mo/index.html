@@ -1,0 +1,341 @@
+
+<!DOCTYPE html><html class=''>
+<head>
+<meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<style class="cp-pen-styles">
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 40px;
+  font: 1em/1.2 'Noto Sans', sans-serif;
+  background: -webkit-linear-gradient(left, #b9c3c9, #6b7c87);
+  background: linear-gradient(90deg, #b9c3c9, #6b7c87);
+}
+
+form {
+	position: relative;
+	width: 300px;
+	margin: 0 auto;
+	padding: 20px;
+	border-top: 30px solid #5c5d5e;
+	border-radius: 10px;
+  background-color: #e8ebed;
+	box-shadow: 0 0 80px rgba(0, 0, 0, .2);
+}
+
+form::before {
+	content: '';
+	position: absolute;
+	top: -20px;
+	left: 15px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+  background-color: #adadae;
+	box-shadow:
+    20px 0 0 #adadae,
+    40px 0 0 #adadae;
+}
+
+h1 {
+  margin: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #adadae;
+  color: #5c5d5e;
+  font-size: 1.1em;
+}
+
+.tree {
+  padding: 20px 0;
+}
+
+.tree::after {
+  content: '';
+  display: block;
+  clear: left;
+}
+
+.tree div {
+  clear: left;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+label, a {
+  display: block;
+  float: left;
+  clear: left;
+  position: relative;
+  margin-left: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #5c5d5e;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+label::before, a::before {
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: -15px;
+  font-size:.8em;
+  font-family: 'FontAwesome';
+}
+
+label::before {
+  content: '\f07b'; /* closed folder */
+}
+
+input:checked + label::before {
+  content: '\f07c'; /* open folder */
+}
+
+a::before {
+  content: '\f068'; /* dash */
+}
+
+input:focus + label, a:focus {
+  outline: none;
+  background-color: #b9c3c9;
+}
+
+.sub {
+  display: none;
+  float: left;
+  margin-left: 20px;
+}
+
+input:checked ~ .sub {
+  display: block;
+}
+
+input[type="reset"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: #e8ebed;
+  background-color: #6b7c87;
+  font-family: inherit;
+  font-size: .9em;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="reset"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #b9c3c9;
+}</style>
+</head>
+<body>
+<!--
+  Checkbox Trickery with CSS:
+  http://codersblock.com/blog/checkbox-trickery-with-css/
+-->
+
+<form>
+	<h1>NEXT TOEIC</h1>
+	<div class="tree">
+		<div>
+			<input id="n-0" type="checkbox">
+			<label for="n-0">테스트</label>
+			<div class="sub">
+				<input id="n-0-1" type="checkbox">
+				<label for="n-0-1">Include</label>
+				<div class="sub">
+					<div>
+						<a href="inc/header_test_01.html" target="_blank">테스트 Header (안내)</a>
+						<a href="inc/header_test_02.html" target="_blank">테스트 Header (지문)</a>
+						<a href="inc/header_test_03.html" target="_blank">테스트 Header (정오답)</a>
+						<a href="inc/header_test_04.html" target="_blank">제한시간완료 Header</a>
+						<a href="inc/footer_test_01.html" target="_blank">테스트 Footer (타입별)</a>
+					</div>
+				</div>
+			</div>
+			<div class="sub">
+				<input id="n-0-2" type="checkbox">
+				<label for="n-0-2">공통 UI</label>
+				<div class="sub">
+					<div>
+						<a href="layout.html" target="_blank">안내페이지</span>
+						<a href="common_01_test.html" target="_blank">테스트 공통</a>
+						<a href="common_constant_answer_lc.html" target="_blank">정오답 (LC)</a>
+						<a href="common_constant_answer_rc.html" target="_blank">정오답 (RC)</a>
+                        <a href="common_constant.html" target="_blank">정오답 (오답 해설)</a>
+                        <a href="common_constant_answer_highlighter.html" target="_blank">정오답 (형광펜 해설)</a>
+						<a href="common_jump.html" target="_blank">전체메뉴</a>
+						<a href="common_jump_test_a.html" target="_blank">전체메뉴 (TEST A)</a>
+						<a href="common_jump_test_b.html" target="_blank">전체메뉴 (TEST B)</a>
+						<a href="common_jump_test_e.html" target="_blank">전체메뉴 (TEST E)</a>
+						<a href="common_jump_constant_answer.html" target="_blank">전체메뉴 (정오답)</a>
+						<a href="toast_pop.html" target="_blank">토스트 팝업</a>
+					</div>
+				</div>
+			</div>
+			<div class="sub">
+				<input id="n-0-3" type="checkbox">
+				<label for="n-0-3">Part별 다른 케이스</label>
+				<div class="sub">
+					<div>
+						<a href="test_part1.html" target="_blank">테스트 (Part1)</a>
+						<a href="test_part1_row.html" target="_blank">세로이미지 (Part1)</a>
+						<a href="test_part1_ca.html" target="_blank">정오답 (Part1)</a>
+						<a href="test_part2_guide.html" target="_blank">안내페이지 (Part2)</a>
+						<a href="test_part2.html" target="_blank">테스트 (Part2)</a>
+						<a href="test_part2_ca.html" target="_blank">정오답 (Part2)</a>
+						<a href="test_part3.html" target="_blank">테스트 (Part3)</a>
+						<a href="test_part3_02.html" target="_blank">다른 지문 (Part3)</a>
+						<a href="test_part3_ca.html" target="_blank">정오답 (Part3)</a>
+						<a href="test_part5.html" target="_blank">테스트 (Part5)</a>
+						<a href="test_part5_ca.html" target="_blank">정오답 (Part5)</a>
+						<a href="test_part6.html" target="_blank">테스트 (Part6)</a>
+						<a href="test_part6_ca.html" target="_blank">정오답 (Part6)</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<input id="n-1" type="checkbox">
+			<label for="n-1">인트로</label>
+			<div class="sub">
+				<a href="intro.html" target="_blank">인트로 최초화면</a>
+				<a href="intro02.html" target="_blank">인트로 안내화면</a>
+				<a href="intro02_test.html" target="_blank">각 TEST별 이용안내</a>
+			</div>
+		</div>
+
+		<div>
+			<input id="n-2" type="checkbox">
+			<label for="n-2">TEST 별</label>
+			<div class="sub">
+				<a href="weak_type01.html" target="_blank">TEST E (화면취약영역안내-학습하기)</a>
+				<a href="weak_type02.html" target="_blank">TEST E (화면취약영역안내-정오답)</a>
+			</div>
+		</div>
+
+		<div>
+			<input id="n-3" type="checkbox">
+			<label for="n-3">파이널리포트</label>
+			<div class="sub">
+				<a href="report01.html" target="_blank">결과리포트 (TEST A)</a>
+				<a href="report01.html" target="_blank">취약영역 팝업 기능 (TEST A)</a>
+				<a href="report01_constant_answer.html" target="_blank">정오답 확인(TEST A)</a>
+				<a href="report_ca01.html" target="_blank">정오답 확인(취약유형)</a>
+				<a href="report_ca02.html" target="_blank">정오답 확인(PART)</a>
+				<a href="report_testC_curation.html" target="_blank">상품추천 큐레이션 (TEST A)</a>
+				<a href="report_testC.html" target="_blank">결과리포트 (TEST C)</a>
+				<a href="report_testD.html" target="_blank">결과리포트 (TEST D)</a>
+				<a href="report_chart_sample.html" target="_blank">횟차별차트 다른값 적용 (TEST D)</a>
+				<a href="report_testE.html" target="_blank">결과리포트 (TEST E)</a>
+				<a href="report_testF.html" target="_blank">결과리포트 (TEST F)</a>
+				<a href="report_testGH.html" target="_blank">결과리포트 (TEST GH)</a>
+			</div>
+		</div>
+
+		<div>
+			<input id="n-4" type="checkbox">
+			<label for="n-4">내강의실</label>
+			<div class="sub">
+				<input id="n-4-0" type="checkbox">
+				<label for="n-4-0">공통푸터</label>
+				<div class="sub">
+					<div>
+						<a href="inc/myclass_footer01.html" target="_blank">내강의실 Footer (공통)</a>
+						<a href="inc/myclass_footer02.html" target="_blank">내강의실 Footer (하단네비게이션만 있는경우)</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub">
+				<input id="n-4-1" type="checkbox">
+				<label for="n-4-1">700반</label>
+				<div class="sub">
+					<div>
+						<a href="myclass700_01.html" target="_blank">내강의실</a>
+						<a href="myclass700_02.html" target="_blank">결과값</a>
+						<a href="myclass700_03.html" target="_blank">인강</a>
+						<a href="myclass700_03_02.html" target="_blank">학습하기</a>
+						<a href="myclass700_03_03.html" target="_blank">학습하기(모의고사)</a>
+						<a href="myclass700_voca.html" target="_blank">VOCA</a>
+						<a href="myclass700_report.html" target="_blank">종합분석1</a>
+						<a href="myclass700_report02.html" target="_blank">종합분석2</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub">
+				<input id="n-4-2" type="checkbox">
+				<label for="n-4-2">900반</label>
+				<div class="sub">
+					<div>
+						<a href="myclass900_01.html" target="_blank">내강의실</a>
+						<a href="myclass900_02.html" target="_blank">결과값</a>
+						<a href="myclass900_03.html" target="_blank">인강</a>
+						<a href="myclass900_03_02.html" target="_blank">학습하기</a>
+						<a href="myclass900_voca.html" target="_blank">VOCA</a>
+						<a href="myclass900_report.html" target="_blank">종합분석1</a>
+						<a href="myclass900_report02.html" target="_blank">종합분석2</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub">
+				<input id="n-4-3" type="checkbox">
+				<label for="n-4-3">990반</label>
+				<div class="sub">
+					<div>
+						<a href="myclass990_01.html" target="_blank">내강의실</a>
+						<a href="myclass990_02.html" target="_blank">결과값</a>
+						<a href="myclass990_03.html" target="_blank">결과값(1차시만)</a>
+						<a href="myclass990_04.html" target="_blank">인강</a>
+						<a href="myclass990_05.html" target="_blank">학습하기</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<input id="n-5" type="checkbox">
+			<label for="n-5">MY</label>
+			<div class="sub">
+				<a href="/asset/skin/html_new/mobile/my_nexto.html" target="_blank">MY (팝업포함)</a>
+			</div>
+		</div>
+
+		<div>
+			<input id="n-6" type="checkbox">
+			<label for="n-6">VOCA</label>
+			<div class="sub">
+				<a href="voca01.html" target="_blank">오늘의 단어</a>
+				<a href="voca02.html" target="_blank">단어테스트</a>
+				<a href="voca03.html" target="_blank">단어가리기(단수)</a>
+				<a href="voca03_multi.html" target="_blank">단어가리기(복수)</a>
+				<a href="voca03_02.html" target="_blank">뜻가리기</a>
+				<a href="voca03_02_multi.html" target="_blank">뜻가리기(정답 복수)</a>
+				<a href="voca04.html" target="_blank">오늘의 단어 결과</a>
+			</div>
+		</div>
+	</div>
+	<input type="reset" value="Collapse All">
+
+</form>
+
+</body></html>

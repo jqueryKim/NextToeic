@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi" />
+	<title> Next Toeic </title>
+	<link rel="stylesheet" type="text/css" href="../common/css/admin.css" />
+	<link rel="stylesheet" type="text/css" href="../common/css/jquery-ui.css" />
+	<script type="text/javascript" src="../common/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.browser.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- header_container -->
+		<div class="header_container">
+			<!-- head -->
+			<div class="head">
+				<div class="wrapper">
+					<h1>
+						<a href="#">
+							<img src="../common/images/logo.png" alt="넥스트 토익" />
+							<span>CMS/LMS</span>
+						</a>
+					</h1>
+					<ul class="lnb">
+						<li>
+							<a href="#">문제등록<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">Part별 문제 등록</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">시험 등록<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">시험 등록</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">문제 검색<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">출처</a></li>
+									<li><a href="#">입력 시점</a></li>
+									<li><a href="#">입력/수정자</a></li>
+									<li><a href="#">파트</a></li>
+									<li><a href="#">태그</a></li>
+									<li><a href="#">제목</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">결과 리포트<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">태그별 정보</a></li>
+									<li><a href="#">환산 정보</a></li>
+									<li><a href="#">등급별 정보</a></li>
+									<li><a href="#">학업 성취 정보(예정)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="active">
+							<a href="#">단어 관리<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li class="active"><a href="#">단어 등록/수정</a></li>
+									<li><a href="#">단어 TEST</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">OMR<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">데이터 모음(예정)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">이용 현황<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">문제별 - 사용(유무) 현황</a></li>
+									<li><a href="#">문제별 - 사용(시험등록) 현황</a></li>
+									<li><a href="#">문제별 - 오답 현황</a></li>
+									<li><a href="#">문제별 - 평균 풀이 시간</a></li>
+									<li><a href="#">시험별 - 응시 현황</a></li>
+									<li><a href="#">시험별 - 풀이 시간</a></li>
+									<li><a href="#">이용자별</a></li>
+									<li><a href="#">태그별</a></li>
+									<li><a href="#">그레이드별</a></li>
+									<li><a href="#">OMR (예정)</a></li>
+									<li><a href="#">로그 기록(예정)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">태그 관리<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">태그 등록/수정</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">권한 관리<span class="cap"></span></a>
+							<div class="lnb_sub">
+								<ul>
+									<li><a href="#">관리자 등록(예정)</a></li>
+									<li><a href="#">전체 권한 메뉴(예정)</a></li>
+									<li><a href="#">내정보수정</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //head -->
+
+			<!-- headerInfo -->
+			<div class="headerInfo">
+				<div class="wrapper">
+					<div class="location">
+						<span>시험 등록</span>
+						<span class="current">시험 등록</span>
+					</div>
+					<ul class="info">
+						<li><em><a href="#">관리자님</a></em> 안녕하세요.</li>
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">홈으로 바로가기</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //headerInfo -->
+		</div>
+		<!-- //header_container -->
+
+		<span class="menu_logo">
+			<a href="#">
+				<img src="../common/images/logo.png" alt="넥스트 토익" /><br>
+				<span>CMS/LMS</span>
+			</a>
+		</span>
+		<button type="button" class="btn_menu">
+			<span>메뉴보기</span>
+			<div class="bar top"></div>
+			<div class="bar middle"></div>
+			<div class="bar bottom"></div>
+		</button>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<!-- container body -->
+		<div id="contents">
+			<!-- contents -->
+			<div class="contents">
+				<!-- title -->
+				<h3 class="titleA">시험 등록</h3>
+				<!-- //title -->
+
+				<!-- tabC -->
+				<div class="tabA">
+					<ul>
+						<li class="active"><a href="#">단어 등록</a></li>
+						<li><a href="#">History</a></li>
+					</ul>
+				</div>
+				<!-- //tabC -->
+
+				<!-- list Form -->
+				<div id="listForm">
+					<!-- searchBox -->
+					<div class="searchBox">
+						<table summary="검색" class="sheetSearch">
+							<caption>검색 테이블</caption>
+							<tr>
+								<td>
+									<!-- col_align_box -->
+									<div class="col_align_box">
+										<span class="left">
+											<select name="" title="" style="width:80px; margin:0 5px">
+												<option value="word">단어</option>
+												<option value="info">뜻</option>
+											</select>
+											<select name="" title="" style="width:80px; margin:0 5px">
+												<option value="">품사</option>
+												<option value="pron.">pron.</option>
+												<option value="n.">n.</option>
+												<option value="v.">v.</option>
+												<option value="adj.">adj.</option>
+												<option value="adv.">adv.</option>
+												<option value="conj.">conj.</option>
+												<option value="prep.">prep.</option>
+												<option value="phr.">phr.</option>
+											</select>
+											<input type="text" name="" title="" placeholder="검색용 키워드" style="width:240px;" />
+										</span>
+
+										<span class="right">
+											<input type="text" name="stsp_sdate" title="검색기간" id="from" class="datepicker" placeholder="시작일" />
+											<span class="dash">-</span>
+											<input type="text" name="stsp_edate" title="검색기간" id="to" class="datepicker" placeholder="종료일" />
+
+											<select name="pageTerm" title="" style="width:85px; margin:0 5px 0 15px">
+												<option value="20" selected="">20 페이지</option>
+												<option value="30">30 페이지</option>
+												<option value="40">40 페이지</option>
+												<option value="50">50 페이지</option>
+												<option value="60">60 페이지</option>
+												<option value="70">70 페이지</option>
+												<option value="80">80 페이지</option>
+												<option value="90">90 페이지</option>
+												<option value="100">100 페이지</option>
+												<option value="110">110 페이지</option>
+												<option value="120">120 페이지</option>
+												<option value="130">130 페이지</option>
+												<option value="140">140 페이지</option>
+												<option value="150">150 페이지</option>
+												<option value="160">160 페이지</option>
+												<option value="170">170 페이지</option>
+												<option value="180">180 페이지</option>
+												<option value="190">190 페이지</option>
+												<option value="200">200 페이지</option>
+											</select>
+
+											<button type="button" class="btnA ver6"><span>엑셀</span></button>
+											<button type="button" class="btnA ver4"><span>UPDATE</span></button>
+											<button type="submit" class="btnA"><span>검색</span></button>
+										</span>
+
+									</div>
+									<!-- //col_align_box -->
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!-- //searchBox -->
+
+					<div class="sheetInfo">
+						<div class="sort">
+							<button type="button" class="btnF ver2"><span>삭제</span></button>
+							<button type="button" class="btnF"><span>단어등록</span></button>
+						</div>
+					</div>
+					<!-- list -->
+					<table summary="일반회원" class="sheetListB">
+						<caption>일반회원 목록</caption>
+						<colgroup>
+							<col style="width:4%">
+							<col style="width:4%">
+							<col style="width:10%">
+							<col style="width:10%">
+							<col>
+							<col style="width:12%">
+							<col style="width:8%">
+							<col style="width:10%">
+							<col style="width:10%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col"><input type="checkbox" name="" title="전체선택" /></th>
+								<th scope="col">No</th>
+								<th scope="col"><a href="#" class="sort">단어</a></th>
+								<th scope="col"><a href="#" class="sort">품사</a></th>
+								<th scope="col"><a href="#" class="sort desc">뜻</a></th>
+								<th scope="col">단어 테스트 연결</th>
+								<th scope="col">수정</th>
+								<th scope="col"><a href="#" class="sort">등록</a></th>
+								<th scope="col" class="last_child"><a href="#" class="sort">등록/수정일</a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" name="" title="" /></td>
+								<td>70</td>
+								<td>hohoho</td>
+								<td>pron.</td>
+								<td class="subject">초코칩먹다요</td>
+								<td></td>
+								<td><a href="#" class="btnA ver2 btnLayer" data-target="layer_voca_modify"><span>수정</span></a></td>
+								<td>RnD관리자</td>
+								<td>20171218</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" title="" /></td>
+								<td>70</td>
+								<td>hohoho</td>
+								<td>pron.</td>
+								<td class="subject">초코칩먹다요</td>
+								<td></td>
+								<td><a href="#" class="btnA ver2 btnLayer" data-target="layer_voca_modify"><span>수정</span></a></td>
+								<td>RnD관리자</td>
+								<td>20171218</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- //list -->
+
+					<div class="paging">
+						<img src="../common/images/ico/ico_prv02.png" alt="처음 페이지" />
+						<img src="../common/images/ico/ico_prv.png" alt="이전 페이지" />
+						<span>
+							<a href="#" class="current">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+						</span>
+						<img src="../common/images/ico/ico_next.png" alt="다음 페이지" />
+						<img src="../common/images/ico/ico_next02.png" alt="마지막 페이지" />
+					</div>
+				</div>
+				<!-- //list Form -->
+			</div>
+			<!-- //contents -->
+		</div>
+		<!-- //container body -->
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<em class="copyright">
+			Copyright© PAGODA SCS Inc. All rights reserved.
+		</em>
+	</div>
+	<!-- //footer -->
+
+	<!-- layer -->
+	<div class="layerWrap" id="layer_voca_modify">
+		<div class="inner">
+			<h4>단어 수정</h4>
+
+			<table summary="단어 수정" class="sheetWriteA">
+				<caption>단어 수정</caption>
+				<colgroup>
+					<col style="width:100px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">단어 <span class="required">*</span></th>
+						<td>hohoho</td>
+					</tr>
+					<tr>
+						<th scope="row">뜻 <span class="required">*</span></th>
+						<td>
+							<input type="text" name="" id="" style="width:100%" />
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">품사 <span class="required">*</span></th>
+						<td>
+							<select name="" title="" style="width:100%">
+								<option value="pron.">pron.</option>
+								<option value="n.">n.</option>
+								<option value="v.">v.</option>
+								<option value="adj.">adj.</option>
+								<option value="adv.">adv.</option>
+								<option value="conj.">conj.</option>
+								<option value="prep.">prep.</option>
+								<option value="phr.">phr.</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">생성/수정 정보</th>
+						<td class="bg_sky">
+							<span class="items"><em>2017-12-18</em>( RnD관리자 )</span>
+							<span class="items"><em>2017-11-20</em>( RnD관리자 )</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="btnWrap">
+				<div class="btnLeft">
+					<a href="#" class="btnA ver5 btnClose"><span>닫기</span></a> &nbsp;
+					<a href="#" class="btnA ver4"><span>삭제</span></a>
+				</div>
+				<div class="btnRight">
+					<a href="#" class="btnA"><span>수정</span></a>
+				</div>
+			</div>
+
+			<a href="#" class="close"><img src="../common/images/ico/ico_close.png" alt="닫기"></a>
+		</div>
+	</div>
+	<!-- //layer -->
+</div>
+
+<script src="../common/js/admin.js" type="text/javascript"></script>
+</body>
+</html>

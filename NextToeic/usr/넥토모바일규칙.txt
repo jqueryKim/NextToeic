@@ -1,0 +1,189 @@
+
+※ 프로젝트 사이트맵
+1. URL : http://designpub.pagoda21.com/asset/skin/NT/html/mobile/index.html
+2. 테스트, 인트로, TEST별 특이페이지( TESTE 취약영역안내), 파이널리포트
+3. 테스트 > Include에 TEST 관련하여 Header, Footer영역을 분류 했습니다.
+
+
+
+※ 레이아웃 예외처리
+1. <div id="contents">에 해당하는 예외처리
+
+＃해당 엘리먼트에 class를 추가하는 방식으로 처리합니다. ex) <div id="contents" class="intro-contents">
+
+- TEST 안내페이지 = guide-contents
+- 인트로 최초화면 = intro-contents
+- 인트로 안내페이지 = intro-content02
+
+
+2. <div id="contents-top"> 헤더영역의 예외처리
+
+＃ <div class="ver_white">, <div class="ver_dark"> 두가지의 class를 가진 엘리먼트가 존재합니다.
+
+- TEST = <div class="ver_dark">
+- 인트로, 파이널리포트 = <div class="ver_white">
+
+＃ 타임바 예외처리 <div id="contents-top">에 class를 추가하는 방식으로 처리합니다. ex) <div id="contents-top" class="over-half">
+
+- 50%이상 경과되었을때 "over-half" class를 추가합니다.
+
+3. <div id="contents-body"> 본문영역의 예외처리
+
+# 해당 엘리먼트에 class를 추가하는 방식으로 처리합니다. ex) <div id="contents-body" class="ver-test">
+
+- TEST 페이지 = ver-test
+- TEST 정오답페이지 = ver-ca
+- 취약영역안내 페이지 = ver-weak
+- 인트로 페이지 = ver-intro
+
+# TEST 페이지에서 part별 예외처리 <div id="contents-body"> 엘리먼트에 data-part 에트리뷰트를 추가하는 방식으로 처리합니다.
+  ex) <div id="contents-body" data-part="1">
+
+- part별로 part1 이면 숫자 1을 값으로 설정해주시면 됩니다.
+
+※ 스크립트 이슈
+common.js는 꼭 </body> 바로위에 넣어주세요.
+
+※ 토스트팝업 호출방법
+toast.init(toast_msg['원하는 메시지']);
+<br>과 같은 html 태그도 삽입가능합니다.
+
+
+※ 정오답페이지에 오답처리, 해당 문제이 정답 처리, 내가 선택했던 답 처리에 대한 주석이 달려있습니다.
+   참고하시어 작업해주세요.
+
+※ TEST Part5의 경우 예외처리
+- 지시문과 mp3플레이어가 없는경우 refer_checkpoint class를 최초 엘리먼트에 추가합니다.
+- 참고 test_part5.html
+
+※ TEST페이지, TEST 정오답 페이지에서 refer_checkpoint class 활용방법
+- 지시문이 있는경우 
+  <div class="questions"> 엘리먼트에 "refer_checkpoint" class를 추가합니다. ex) <div class="questions refer_checkpoint">
+
+- mp3플레이어가 있는경우
+  <div id="cb-player"> 엘리먼트에 "refer_checkpoint" class를 추가합니다. ex) <div id="cb-player" class="refer_checkpoint">
+
+※ TEST 페이지에서 지문 이미지만 나오는경우
+   test_part1.html, test_part1_ca.html 의 주석을 참고하시면 됩니다.
+
+※ 파이널리포트 정오답페이지 예외처리
+   report01_constant_answer.html 의 주석을 참고하시면 됩니다.
+
+※ 파이널리포트 토익점수 분포도 이미지 분기처리
+
+- 분포도 이미지 
+  값에따라 이미지명을 변경해주시면 됩니다.
+  chart_1.png <-- 숫자값이 1 ~ 6번까지 존재합니다.
+  chart_2.png, chart_3.png, chart_4.png, chart_5.png, chart_6.png
+
+  report01.html 의 주석을 참고하시면 됩니다.
+
+※ 파이널리포트 차트 값 설정
+1. 가로형 차트
+<div class="chart-items">
+	<div class="display-table">
+		<div class="cell chart-name">전체 평균</div>
+		<div class="cell">
+			<div class="chart-bar-wrap">
+				<span class="chart-bar" style="width:55%"><em class="chart-num">18</em></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+- 위와같이 하나의 <div class="chart-items">가 하나의 Bar로 이루어져있습니다.
+  <span class="chart-bar" style="width:55%">  값을 %로 계산하여 echo찍어주시면 됩니다.
+  <em class="chart-num">실제 값</em>  실제값을 echo찍어주시면 됩니다.
+
+<div class="chart-items result-items">
+	<div class="display-table">
+		<div class="cell chart-name">내점수</div>
+		<div class="cell">
+			<div class="chart-bar-wrap">
+				<span class="chart-bar" style="width:75%"><em class="chart-num">23</em></span>
+			</div>
+
+			<div class="figures">
+				<div class="display-table">
+					<span>10</span>
+					<span>20</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+- 컬럼명은 제일 마지막 차트박스에 <div class="figures">을 넣어주시면됩니다.
+  갯수 상관없이 <span>으로 감싸서 추가해주시되 0은 제외하고 넣으셔도 됩니다.
+
+2. 가로형 구간차트
+<div class="chart-type-col color-theme02">
+	<div class="chart-items">
+		<div class="display-table">
+			<div class="cell chart-name">Total</div>
+			<div class="cell">
+				<div class="chart-bar-wrap">
+					<div class="chart-sections">
+						<ul class="display-table">
+							<li><em>400</em></li>
+							<li><em>500</em></li>
+							<li><em>600</em></li>
+							<li><em>700</em></li>
+							<li class="current"><em>800</em></li>
+							<li>
+								<em>900</em>
+								<span class="last-figures">990</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+- 위와같이 하나의 해당 활성화 영역에 "current" class를 추가해주시면 됩니다.
+- 마지막 <li> 안에는 <span class="last-figures">990</span> 처럼 마지막 컬럼값이 들어가야합니다.
+
+3. 세로형 차트
+<div class="chart-type-row">
+	<span class="chart-line"><span></span></span>
+
+	<!-- chart-wrap -->
+	<div class="chart-wrap">
+		<div class="display-table">
+			<!-- chart-items -->
+			<div class="chart-items">
+				<div class="chart-name"><em>사진묘사</em></div>
+				<div class="chart-bar-wrap">
+					<span class="chart-bar" style="height:60%"><em class="chart-num"></em></span>
+				</div>
+			</div>
+			<!-- //chart-items -->
+		</div>
+		
+	</div>
+	<!-- //chart-wrap -->
+</div>
+
+- 위와같이 <div class="chart-items">이 각각 하나의 컬럼 영역입니다.
+- <span class="chart-bar" style="height:60%"> 값을 %로 계산하여 height값으로 설정해주시면 됩니다.
+
+4. 점수분포 차트
+- report_testD.html의 횟차별 점수 분포 차트를 확인하시면 됩니다.
+- 주석으로 해당차트의 설명을 기재하였습니다.
+
+5. 원형 차트
+<div class="chart-circle-wrap">
+	<div class="chart-circle data-percent="86">
+		<svg width="100%" height="100%">
+		  <circle r="44%" cx="50%" cy="50%" class="chart-circle-base" fill="transparent" stroke-width="14" stroke="#EEE"></circle>
+		  <circle r="44%" cx="50%" cy="50%" class="chart-circle-progress" stroke-width="14" stroke-linecap="round"></circle>  
+		</svg>
+		<em class="per-num"><span>0</span>%</em>
+	</div>
+</div>
+
+- 위와같이 <div class="chart-circle-wrap">이 하나의 원형 차트입니다.
+- <div class="chart-circle data-percent="86"> 처럼 data-percent 값을 설정해주시면 됩니다.
+- <em class="per-num"><span>실제 값</span>%</em> 처럼 실제 값을 설정해주시면 됩니다.
